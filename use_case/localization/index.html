@@ -8,21 +8,21 @@
       
       
       
-        <link rel="canonical" href="https://tier4.github.io/driving_log_replayer/">
+        <link rel="canonical" href="https://tier4.github.io/driving_log_replayer/use_case/localization/">
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.6">
     
     
       
-        <title>Driving Log Replayer Documentation</title>
+        <title>自己位置推定の評価 - Driving Log Replayer Documentation</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.4a0965b7.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4a0965b7.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.cbb835fc.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
         
       
       
@@ -38,7 +38,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#driving-log-replayer-documentation" class="md-skip">
+        <a href="#_1" class="md-skip">
           Skip to content
         </a>
       
@@ -82,7 +82,7 @@
 
 <header class="md-header md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Driving Log Replayer Documentation" class="md-header__button md-logo" aria-label="Driving Log Replayer Documentation" data-md-component="logo">
+    <a href="../.." title="Driving Log Replayer Documentation" class="md-header__button md-logo" aria-label="Driving Log Replayer Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Driving Log Replayer Documentation
+              自己位置推定の評価
             
           </span>
         </div>
@@ -189,12 +189,10 @@
         
   
   
-    
-  
 
 
   <li class="md-tabs__item">
-    <a href="." class="md-tabs__link md-tabs__link--active">
+    <a href="../.." class="md-tabs__link">
       Driving Log Replayer Documentation
     </a>
   </li>
@@ -209,7 +207,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="introduction/" class="md-tabs__link">
+      <a href="../../introduction/" class="md-tabs__link">
         Introduction
       </a>
     </li>
@@ -225,7 +223,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="scenario_format/" class="md-tabs__link">
+      <a href="../../scenario_format/" class="md-tabs__link">
         Scenario format
       </a>
     </li>
@@ -241,7 +239,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="result_format/" class="md-tabs__link">
+      <a href="../../result_format/" class="md-tabs__link">
         Result format
       </a>
     </li>
@@ -251,13 +249,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="use_case/" class="md-tabs__link">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
         Use case
       </a>
     </li>
@@ -291,7 +291,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Driving Log Replayer Documentation" class="md-nav__button md-logo" aria-label="Driving Log Replayer Documentation" data-md-component="logo">
+    <a href="../.." title="Driving Log Replayer Documentation" class="md-nav__button md-logo" aria-label="Driving Log Replayer Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -320,59 +320,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Driving Log Replayer Documentation
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         Driving Log Replayer Documentation
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#about-driving-log-replayer" class="md-nav__link">
-    About Driving Log Replayer
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
-    Getting started
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -408,7 +360,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="introduction/">Introduction</a>
+          <a href="../../introduction/">Introduction</a>
           
             <label for="__nav_2">
               <span class="md-nav__icon md-icon"></span>
@@ -431,7 +383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="introduction/overview/" class="md-nav__link">
+      <a href="../../introduction/overview/" class="md-nav__link">
         パッケージ概要
       </a>
     </li>
@@ -445,7 +397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="introduction/preparation/" class="md-nav__link">
+      <a href="../../introduction/preparation/" class="md-nav__link">
         準備
       </a>
     </li>
@@ -459,7 +411,7 @@
   
   
     <li class="md-nav__item">
-      <a href="introduction/run/" class="md-nav__link">
+      <a href="../../introduction/run/" class="md-nav__link">
         起動方法
       </a>
     </li>
@@ -498,7 +450,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="scenario_format/">Scenario format</a>
+          <a href="../../scenario_format/">Scenario format</a>
           
         </div>
       
@@ -542,7 +494,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="result_format/">Result format</a>
+          <a href="../../result_format/">Result format</a>
           
         </div>
       
@@ -567,12 +519,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       
       
@@ -594,7 +548,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="use_case/">Use case</a>
+          <a href="../">Use case</a>
           
             <label for="__nav_5">
               <span class="md-nav__icon md-icon"></span>
@@ -615,11 +569,155 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="use_case/localization/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          自己位置推定の評価
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         自己位置推定の評価
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    評価方法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#topic" class="md-nav__link">
+    評価ノードが使用する Topic とデータ型
+  </a>
+  
+    <nav class="md-nav" aria-label="評価ノードが使用する Topic とデータ型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logging_simulatorlaunch" class="md-nav__link">
+    logging_simulator.launch に渡す引数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    信頼度正常
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    信頼度異常
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    収束正常
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    収束異常
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    評価フロー
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simulation" class="md-nav__link">
+    simulation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rosbag-topic" class="md-nav__link">
+    入力 rosbag に含まれるべき topic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rosbag-topic_1" class="md-nav__link">
+    入力 rosbag に含まれてはいけない topic
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluation" class="md-nav__link">
+    evaluation
+  </a>
+  
+    <nav class="md-nav" aria-label="evaluation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    シナリオフォーマット
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    評価結果ファイルフォーマット
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -631,7 +729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="use_case/obstacle_segmentation/" class="md-nav__link">
+      <a href="../obstacle_segmentation/" class="md-nav__link">
         点群生成の評価
       </a>
     </li>
@@ -645,7 +743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="use_case/perception/" class="md-nav__link">
+      <a href="../perception/" class="md-nav__link">
         認識機能の評価
       </a>
     </li>
@@ -659,7 +757,7 @@
   
   
     <li class="md-nav__item">
-      <a href="use_case/performance_diag/" class="md-nav__link">
+      <a href="../performance_diag/" class="md-nav__link">
         診断機能の評価
       </a>
     </li>
@@ -700,16 +798,112 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#about-driving-log-replayer" class="md-nav__link">
-    About Driving Log Replayer
+  <a href="#_2" class="md-nav__link">
+    評価方法
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
-    Getting started
+  <a href="#topic" class="md-nav__link">
+    評価ノードが使用する Topic とデータ型
   </a>
+  
+    <nav class="md-nav" aria-label="評価ノードが使用する Topic とデータ型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logging_simulatorlaunch" class="md-nav__link">
+    logging_simulator.launch に渡す引数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    信頼度正常
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    信頼度異常
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    収束正常
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    収束異常
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    評価フロー
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simulation" class="md-nav__link">
+    simulation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rosbag-topic" class="md-nav__link">
+    入力 rosbag に含まれるべき topic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rosbag-topic_1" class="md-nav__link">
+    入力 rosbag に含まれてはいけない topic
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluation" class="md-nav__link">
+    evaluation
+  </a>
+  
+    <nav class="md-nav" aria-label="evaluation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    シナリオフォーマット
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    評価結果ファイルフォーマット
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -725,23 +919,207 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/tier4/driving_log_replayer/edit/main/docs/index.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/tier4/driving_log_replayer/edit/main/docs/use_case/localization.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="driving-log-replayer-documentation">Driving Log Replayer Documentation</h1>
-<p>Driving Log Replayer 日本語ドキュメント</p>
-<h2 id="about-driving-log-replayer">About Driving Log Replayer</h2>
-<p>Driving Log Replayer is a ROS package that evaluates the functionality of Autoware.Universe</p>
-<h2 id="getting-started">Getting started</h2>
+<h1 id="_1">自己位置推定の評価</h1>
+<p>Autoware の自己位置推定(localization)が安定して動作しているかを評価する。</p>
+<p>Autoware では自己位置推定の確からしさを示す以下の指標が publish されており、これらの値がシナリオで指定した値より大きかどうかで自己位置推定が安定しているかを判断する。
+また、NDT Scan Matching が収束しているかを判定するため、NDT と EKF で計算された pose の横方向の距離誤差が一定以内に収まっているかを判定する。</p>
+<h2 id="_2">評価方法</h2>
+<p>driving_log_replayer/launch/localization.launch.py を用いて、評価用のノードを autoware_launch の logging_simulator.launch と一緒に立ち上げる。</p>
+<h2 id="topic">評価ノードが使用する Topic とデータ型</h2>
 <ul>
-<li><a href="introduction">Introduction</a></li>
-<li><a href="scenario_format">Scenario Format</a></li>
-<li><a href="result_format">Result Format</a></li>
-<li><a href="use_case">Use Case</a></li>
+<li>subscribe</li>
 </ul>
+<table>
+<thead>
+<tr>
+<th>topic 名</th>
+<th>データ型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/localization/pose_estimator/transform_probability</td>
+<td>tier4_debug_msgs::msg::Float32Stamped</td>
+</tr>
+<tr>
+<td>/localization/pose_estimator/nearest_voxel_transformation_likelihood</td>
+<td>tier4_debug_msgs::msg::Float32Stamped</td>
+</tr>
+<tr>
+<td>/localization/pose_estimator/pose</td>
+<td>geometry_msgs::msg::PoseStamped</td>
+</tr>
+<tr>
+<td>/localization/kinematic_state</td>
+<td>nav_msgs::msg::Odometry</td>
+</tr>
+<tr>
+<td>/tf</td>
+<td>tf2_msgs/msg/TFMessage</td>
+</tr>
+<tr>
+<td>/localization/util/downsample/pointcloud</td>
+<td>sensor_msgs::msg::PointCloud2</td>
+</tr>
+<tr>
+<td>/localization/pose_estimator/points_aligned</td>
+<td>sensor_msgs::msg::PointCloud2</td>
+</tr>
+<tr>
+<td>/localization/pose_estimator/exe_time_ms</td>
+<td>tier4_debug_msgs::msg::Float32Stamped</td>
+</tr>
+<tr>
+<td>/localization/pose_estimator/iteration_num</td>
+<td>tier4_debug_msgs::msg::Int32Stamped</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>publish</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>topic 名</th>
+<th>データ型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/driving_log_replayer/localization/lateral_distance</td>
+<td>example_interfaces::msg::Float64</td>
+</tr>
+<tr>
+<td>/initialpose</td>
+<td>geometry_msgs::msg::PoseWithCovarianceStamped</td>
+</tr>
+</tbody>
+</table>
+<h3 id="logging_simulatorlaunch">logging_simulator.launch に渡す引数</h3>
+<p>autoware の処理を軽くするため、評価に関係のないモジュールは launch の引数に false を渡すことで無効化する。以下を設定している。</p>
+<ul>
+<li>planning: false</li>
+<li>control: false</li>
+</ul>
+<p>NDT の信頼度を以下の 2 つの topic のうち、シナリオで設定した方式で評価する。</p>
+<ul>
+<li>/localization/pose_estimator/transform_probability</li>
+<li>/localization/pose_estimator/nearest_voxel_transformation_likelihood</li>
+</ul>
+<p>NDT の収束性を以下から評価する</p>
+<ul>
+<li>/localization/pose_estimator/pose</li>
+</ul>
+<p>上記のトピックを処理して、以下のいずれかとして評価される。</p>
+<p>ただし評価開始は、/localization/pose_estimator/transform_probability &gt; 0 もしくは /localization/pose_estimator/nearest_voxel_transformation_likelihood &gt; 0 になった時点からとする。</p>
+<h3 id="_3">信頼度正常</h3>
+<p>/localization/pose_estimator/transform_probability、または/localization/pose_estimator/nearest_voxel_transformation_likelihood の data がシナリオに記述した AllowableLikelihood 以上の場合</p>
+<h3 id="_4">信頼度異常</h3>
+<p>/localization/pose_estimator/transform_probability、または/localization/pose_estimator/nearest_voxel_transformation_likelihood の data がシナリオに記述した AllowableLikelihood 未満の場合</p>
+<h3 id="_5">収束正常</h3>
+<p>以下の 3 つの条件を全て満たす場合</p>
+<ul>
+<li>/localization/pose_estimator/pose と /localization/pose_twist_fusion_filter/pose から横方向の距離を計算して、シナリオに記述した AllowableDistance 以下</li>
+<li>/localization/pose_estimator/exe_time_ms が、シナリオに記述した AllowableExeTimeMs 以下</li>
+<li>/localization/pose_estimator/iteration_num が、シナリオに記述した AllowableIterationNum 以下</li>
+</ul>
+<h3 id="_6">収束異常</h3>
+<p>収束正常の条件を満たさない場合</p>
+<h3 id="_7">評価フロー</h3>
+<ol>
+<li>launch で評価ノード(localization_evaluator_node)と logging_simulator.launch、ros2 bag play を立ち上げる</li>
+<li>bag から出力されたセンサーデータを autoware が受け取って、自己位置推定を行う</li>
+<li>評価ノードが/localization/pose_estimator/transform_probability、または/localization/pose_estimator/nearest_voxel_transformation_likelihood、及び/localization/pose_estimator/pose を subscribe して、コールバックで評価を行う</li>
+</ol>
+<h3 id="simulation">simulation</h3>
+<p>シミュレーション実行に必要な情報を述べる。</p>
+<h3 id="rosbag-topic">入力 rosbag に含まれるべき topic</h3>
+<p>車両の ECU の CAN と、使用している sensor の topic が必要
+以下は例であり、違うセンサーを使っている場合は適宜読み替える。</p>
+<p>LiDAR が複数ついている場合は、搭載されているすべての LiDAR の packets を含める</p>
+<ul>
+<li>/sensing/gnss/ublox/fix_velocity</li>
+<li>/sensing/gnss/ublox/nav_sat_fix</li>
+<li>/sensing/gnss/ublox/navpvt</li>
+<li>/sensing/imu/tamagawa/imu_raw</li>
+<li>/sensing/lidar/*/velodyne_packets</li>
+<li>/gsm8/from_can_bus</li>
+</ul>
+<h3 id="rosbag-topic_1">入力 rosbag に含まれてはいけない topic</h3>
+<ul>
+<li>/clock</li>
+</ul>
+<h2 id="evaluation">evaluation</h2>
+<p>評価に必要な情報を述べる。</p>
+<h3 id="_8">シナリオフォーマット</h3>
+<pre><code class="language-yaml">Evaluation:
+  UseCaseName: localization
+  UseCaseFormatVersion: 1.2.0
+  Conditions:
+    Convergence: # 収束性評価
+      AllowableDistance: 0.2 # 直線距離でこの距離以内だったら収束とみなす
+      AllowableExeTimeMs: 100.0 # NDTの計算時間がこの値以下なら成功とみなす
+      AllowableIterationNum: 30 # NDTの計算回数がこの値以下なら成功とみなす
+      PassRate: 95.0 # 収束性の評価試行回数の内、どの程度(%)評価成功だったら成功とするか
+    Reliability: # 信頼度評価
+      Method: NVTL # NVTL or TPのどちらで評価を行うか
+      AllowableLikelihood: 3.0 # この値以上なら信頼度は正常とみなす
+      NGCount: 10 # 信頼度異常が連続でこの回数続いたら信頼度評価失敗とみなす
+  InitialPose:
+    position:
+      x: 16876.271484375
+      y: 36087.9453125
+      z: 0.0
+    orientation:
+      x: 0.0
+      y: 0.0
+      z: 0.23490284404117467
+      w: 0.9720188546840887
+</code></pre>
+<h3 id="_9">評価結果ファイルフォーマット</h3>
+<p>localization では、収束性と信頼度の 2 つを評価しているので、行毎に収束性または信頼度のどちらかの結果が入っている。
+Result は収束性と信頼度両方のパスしていれば true でそれ以外は false 失敗となる。</p>
+<p>以下に、それぞれの評価の例を記述する。
+ただし、結果ファイルフォーマットで解説済みの共通部分については省略する。</p>
+<p>収束性の結果(Frame の中に Convergence 項目がある場合)</p>
+<pre><code class="language-json">{
+  &quot;Frame&quot;: {
+    &quot;Convergence&quot;: {
+      &quot;Result&quot;: &quot;Success or Fail&quot;,
+      &quot;Info&quot;: [
+        {
+          &quot;LateralDistance&quot;: &quot;評価に使用したndtとekfの横方向の距離差&quot;,
+          &quot;HorizontalDistance&quot;: &quot;ndtとekfの水平距離。参考値&quot;,
+          &quot;ExeTimeMs&quot;: &quot;評価に使用したndtの計算にかかった時間&quot;,
+          &quot;IterationNum&quot;: &quot;評価に使用したndtの再計算回数&quot;
+        }
+      ]
+    }
+  }
+}
+</code></pre>
+<p>信頼度の結果(Frame に Reliability の項目がある場合)</p>
+<pre><code class="language-json">{
+  &quot;Frame&quot;: {
+    &quot;Reliability&quot;: {
+      &quot;Result&quot;: &quot;Success or Fail&quot;,
+      &quot;Info&quot;: [
+        {
+          &quot;Value&quot;: &quot;評価に使用したNVTL or TPの値&quot;,
+          &quot;Reference&quot;: &quot;評価に使用しなかった尤度。参考値。ValueがNVTLならTPが入る&quot;
+        }
+      ]
+    }
+  }
+}
+</code></pre>
 
               
             </article>
@@ -761,15 +1139,30 @@
     
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
+        
+        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: 評価ユースケース" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              評価ユースケース
+            </div>
+          </div>
+        </a>
+      
       
         
-        <a href="introduction/" class="md-footer__link md-footer__link--next" aria-label="Next: はじめに" rel="next">
+        <a href="../obstacle_segmentation/" class="md-footer__link md-footer__link--next" aria-label="Next: 点群生成の評価" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              はじめに
+              点群生成の評価
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -803,10 +1196,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "assets/javascripts/workers/search.85cb4492.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../assets/javascripts/workers/search.85cb4492.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.a877e258.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a877e258.min.js"></script>
       
     
   </body>
