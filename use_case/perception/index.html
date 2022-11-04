@@ -11,22 +11,21 @@
         <link rel="canonical" href="https://tier4.github.io/driving_log_replayer/use_case/perception/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.6">
     
     
       
-        <title>認識機能の評価 - Driving Log Replayer Documentation</title>
+        <title>Evaluate perception - Driving Log Replayer Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.20d9efc8.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4a0965b7.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
         
       
       
-
     
     
     
@@ -39,11 +38,10 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
-    
     
     
   </head>
@@ -68,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#evaluate-perception" class="md-skip">
           Skip to content
         </a>
       
@@ -76,6 +74,12 @@
     <div data-md-component="announce">
       
     </div>
+    
+      <div data-md-component="outdated" hidden>
+        <aside class="md-banner md-banner--warning">
+          
+        </aside>
+      </div>
     
     
       
@@ -103,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              認識機能の評価
+              Evaluate perception
             
           </span>
         </div>
@@ -133,6 +137,32 @@
       </form>
     
     
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="../../" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="../../ja/" hreflang="ja" class="md-select__link">
+                    日本語
+                  </a>
+                </li>
+                
+            </ul>
+          </div>
+        </div>
+      </div>
+    
     
       <label class="md-header__button md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
@@ -148,7 +178,7 @@
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
@@ -172,7 +202,7 @@
         <a href="https://github.com/tier4/driving_log_replayer" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -209,8 +239,24 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../introduction/" class="md-tabs__link">
-        Introduction
+      <a href="../../quick_start/installation/" class="md-tabs__link">
+        Quick start
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../overview/" class="md-tabs__link">
+        Overview
       </a>
     </li>
   
@@ -306,7 +352,7 @@
       <a href="https://github.com/tier4/driving_log_replayer" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -348,7 +394,9 @@
       
         
           
-            
+        
+          
+        
           
         
           
@@ -359,34 +407,26 @@
         
       
       
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="../../introduction/">Introduction</a>
-          
-            <label for="__nav_2">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
+        <label class="md-nav__link" for="__nav_2">
+          Quick start
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
-      <nav class="md-nav" aria-label="Introduction" data-md-level="1">
+      <nav class="md-nav" aria-label="Quick start" data-md-level="1">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
-          Introduction
+          Quick start
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
             
-          
-            
               
   
   
   
     <li class="md-nav__item">
-      <a href="../../introduction/overview/" class="md-nav__link">
-        パッケージ概要
+      <a href="../../quick_start/installation/" class="md-nav__link">
+        Installation
       </a>
     </li>
   
@@ -399,8 +439,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../introduction/preparation/" class="md-nav__link">
-        準備
+      <a href="../../quick_start/setup/" class="md-nav__link">
+        Setup
       </a>
     </li>
   
@@ -413,8 +453,50 @@
   
   
     <li class="md-nav__item">
-      <a href="../../introduction/run/" class="md-nav__link">
-        起動方法
+      <a href="../../quick_start/localization/" class="md-nav__link">
+        Localization Evaluation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick_start/obstacle_segmentation/" class="md-nav__link">
+        Obstacle Segmentation Evaluation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick_start/perception/" class="md-nav__link">
+        Perception Evaluation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick_start/performance_diag/" class="md-nav__link">
+        Performance Diag Evaluation
       </a>
     </li>
   
@@ -447,22 +529,58 @@
             
           
         
+          
+        
+          
+        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../scenario_format/">Scenario format</a>
+          <a href="../../overview/">Overview</a>
+          
+            <label for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
           
         </div>
       
-      <nav class="md-nav" aria-label="Scenario format" data-md-level="1">
+      <nav class="md-nav" aria-label="Overview" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
-          Scenario format
+          Overview
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/command/" class="md-nav__link">
+        Command
+      </a>
+    </li>
+  
+
             
           
         </ul>
@@ -496,12 +614,56 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
+          <a href="../../scenario_format/">Scenario format</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Scenario format" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Scenario format
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
           <a href="../../result_format/">Result format</a>
           
         </div>
       
       <nav class="md-nav" aria-label="Result format" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
+        <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Result format
         </label>
@@ -528,7 +690,7 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
       
       
@@ -552,14 +714,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../">Use case</a>
           
-            <label for="__nav_5">
+            <label for="__nav_6">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
       <nav class="md-nav" aria-label="Use case" data-md-level="1">
-        <label class="md-nav__title" for="__nav_5">
+        <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
           Use case
         </label>
@@ -574,7 +736,7 @@
   
     <li class="md-nav__item">
       <a href="../localization/" class="md-nav__link">
-        自己位置推定の評価
+        Evaluate self-localization estimation
       </a>
     </li>
   
@@ -588,7 +750,7 @@
   
     <li class="md-nav__item">
       <a href="../obstacle_segmentation/" class="md-nav__link">
-        点群生成の評価
+        Evaluate point cloud generation
       </a>
     </li>
   
@@ -611,12 +773,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          認識機能の評価
+          Evaluate perception
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        認識機能の評価
+        Evaluate perception
       </a>
       
         
@@ -635,23 +797,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    注意事項
+  <a href="#evaluation-method" class="md-nav__link">
+    Evaluation method
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    依存ライブラリ
-  </a>
-  
-    <nav class="md-nav" aria-label="依存ライブラリ">
+    <nav class="md-nav" aria-label="Evaluation method">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#driving_log_replayer" class="md-nav__link">
-    依存ライブラリとの driving_log_replayer の役割分担
+  <a href="#notes" class="md-nav__link">
+    Notes
   </a>
   
 </li>
@@ -662,44 +817,23 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    評価方法
+  <a href="#evaluation-results" class="md-nav__link">
+    Evaluation results
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#topic" class="md-nav__link">
-    評価ノードが使用する Topic とデータ型
-  </a>
-  
-    <nav class="md-nav" aria-label="評価ノードが使用する Topic とデータ型">
+    <nav class="md-nav" aria-label="Evaluation results">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#logging_simulatorlaunch" class="md-nav__link">
-    logging_simulator.launch に渡す引数
+  <a href="#perception-normal" class="md-nav__link">
+    Perception Normal
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    正常
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    異常
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    評価フロー
+  <a href="#perception-error" class="md-nav__link">
+    Perception Error
   </a>
   
 </li>
@@ -710,23 +844,30 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#simulation" class="md-nav__link">
-    simulation
-  </a>
-  
-    <nav class="md-nav" aria-label="simulation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#rosbag-topic" class="md-nav__link">
-    入力 rosbag に含まれるべき topic
+  <a href="#topic-name-and-data-type-used-by-evaluation-node" class="md-nav__link">
+    Topic name and data type used by evaluation node
   </a>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#arguments-passed-to-logging_simulatorlaunch" class="md-nav__link">
+    Arguments passed to logging_simulator.launch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependent-libraries" class="md-nav__link">
+    Dependent libraries
+  </a>
+  
+    <nav class="md-nav" aria-label="Dependent libraries">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#rosbag-topic_1" class="md-nav__link">
-    入力 rosbag に含まれてはいけない topic
+  <a href="#division-of-roles-of-driving_log_replayer-with-dependent-libraries" class="md-nav__link">
+    Division of roles of driving_log_replayer with dependent libraries
   </a>
   
 </li>
@@ -737,30 +878,57 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#evaluation" class="md-nav__link">
-    evaluation
+  <a href="#about-simulation" class="md-nav__link">
+    About simulation
   </a>
   
-    <nav class="md-nav" aria-label="evaluation">
+    <nav class="md-nav" aria-label="About simulation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    シナリオフォーマット
+  <a href="#topic-to-be-included-in-the-input-rosbag" class="md-nav__link">
+    Topic to be included in the input rosbag
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#about-evaluation" class="md-nav__link">
+    About Evaluation
+  </a>
+  
+    <nav class="md-nav" aria-label="About Evaluation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-format" class="md-nav__link">
+    Scenario Format
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    評価結果ファイルフォーマット
+  <a href="#evaluation-result-format" class="md-nav__link">
+    Evaluation Result Format
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#pickle" class="md-nav__link">
-    pickle ファイル
+  <a href="#pickle-file" class="md-nav__link">
+    pickle file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#result-file-of-database-evaluation" class="md-nav__link">
+    Result file of database evaluation
   </a>
   
 </li>
@@ -786,7 +954,7 @@
   
     <li class="md-nav__item">
       <a href="../performance_diag/" class="md-nav__link">
-        診断機能の評価
+        Evaluate diagnostics
       </a>
     </li>
   
@@ -826,23 +994,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    注意事項
+  <a href="#evaluation-method" class="md-nav__link">
+    Evaluation method
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    依存ライブラリ
-  </a>
-  
-    <nav class="md-nav" aria-label="依存ライブラリ">
+    <nav class="md-nav" aria-label="Evaluation method">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#driving_log_replayer" class="md-nav__link">
-    依存ライブラリとの driving_log_replayer の役割分担
+  <a href="#notes" class="md-nav__link">
+    Notes
   </a>
   
 </li>
@@ -853,44 +1014,23 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    評価方法
+  <a href="#evaluation-results" class="md-nav__link">
+    Evaluation results
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#topic" class="md-nav__link">
-    評価ノードが使用する Topic とデータ型
-  </a>
-  
-    <nav class="md-nav" aria-label="評価ノードが使用する Topic とデータ型">
+    <nav class="md-nav" aria-label="Evaluation results">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#logging_simulatorlaunch" class="md-nav__link">
-    logging_simulator.launch に渡す引数
+  <a href="#perception-normal" class="md-nav__link">
+    Perception Normal
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    正常
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    異常
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    評価フロー
+  <a href="#perception-error" class="md-nav__link">
+    Perception Error
   </a>
   
 </li>
@@ -901,23 +1041,30 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#simulation" class="md-nav__link">
-    simulation
-  </a>
-  
-    <nav class="md-nav" aria-label="simulation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#rosbag-topic" class="md-nav__link">
-    入力 rosbag に含まれるべき topic
+  <a href="#topic-name-and-data-type-used-by-evaluation-node" class="md-nav__link">
+    Topic name and data type used by evaluation node
   </a>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#arguments-passed-to-logging_simulatorlaunch" class="md-nav__link">
+    Arguments passed to logging_simulator.launch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependent-libraries" class="md-nav__link">
+    Dependent libraries
+  </a>
+  
+    <nav class="md-nav" aria-label="Dependent libraries">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#rosbag-topic_1" class="md-nav__link">
-    入力 rosbag に含まれてはいけない topic
+  <a href="#division-of-roles-of-driving_log_replayer-with-dependent-libraries" class="md-nav__link">
+    Division of roles of driving_log_replayer with dependent libraries
   </a>
   
 </li>
@@ -928,30 +1075,57 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#evaluation" class="md-nav__link">
-    evaluation
+  <a href="#about-simulation" class="md-nav__link">
+    About simulation
   </a>
   
-    <nav class="md-nav" aria-label="evaluation">
+    <nav class="md-nav" aria-label="About simulation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    シナリオフォーマット
+  <a href="#topic-to-be-included-in-the-input-rosbag" class="md-nav__link">
+    Topic to be included in the input rosbag
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#about-evaluation" class="md-nav__link">
+    About Evaluation
+  </a>
+  
+    <nav class="md-nav" aria-label="About Evaluation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-format" class="md-nav__link">
+    Scenario Format
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    評価結果ファイルフォーマット
+  <a href="#evaluation-result-format" class="md-nav__link">
+    Evaluation Result Format
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#pickle" class="md-nav__link">
-    pickle ファイル
+  <a href="#pickle-file" class="md-nav__link">
+    pickle file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#result-file-of-database-evaluation" class="md-nav__link">
+    Result file of database evaluation
   </a>
   
 </li>
@@ -969,49 +1143,45 @@
               </div>
             
           
-          
-            <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
                 
-                  
-
-  <a href="https://github.com/tier4/driving_log_replayer/edit/main/docs/use_case/perception.md" title="Edit this page" class="md-content__button md-icon">
-    
+  <a href="https://github.com/tier4/driving_log_replayer/edit/main/docs/use_case/perception.en.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="_1">認識機能の評価</h1>
-<p>Autoware の認識機能(perception)の認識結果から mAP(mean Average Precision)などの指標を計算して性能を評価する。</p>
-<p>perception モジュールを起動して出力される perception の topic を評価用ライブラリに渡して評価を行う。</p>
-<ul>
-<li>/perception/object_recognition/detection/objects|autoware_auto_perception_msgs/msg/DetectedObjects</li>
-<li>/perception/object_recognition/tracking/objects|autoware_auto_perception_msgs/msg/TrackedObjects</li>
-</ul>
-<h2 id="_2">注意事項</h2>
-<p>autoware をセットアップして perception のモジュールを初回起動した場合には、lidar_centerpoint の onnx ファイルの変換処理の待ちが入るため、途中で launch が止まったように見えることがある。</p>
-<p>青文字太字灰色背景で lidar_centerpoint engine files are generated.
-という文字列が表示されるまでは、そのまま待つこと。</p>
-<h2 id="_3">依存ライブラリ</h2>
-<p><a href="https://github.com/tier4/autoware_perception_evaluation">perception_eval</a></p>
-<h3 id="driving_log_replayer">依存ライブラリとの driving_log_replayer の役割分担</h3>
-<p>ROS との接続部分が driving_log_replayer、データセットを扱う部分が perception_eval という役割分担になっている。</p>
-<p>perception_eval は ROS 非依存のライブラリなので、ROS のオブジェクトをそのまま受け取ることができない。
-また、timestamp が ROS ではナノ秒、データセットは nuScenes ベースでミリ秒が使用されている。</p>
-<p>driving_log_replayer 側では、autoware の perception モジュールから出力された topic を subscribe し、perception_eval が期待するデータ形式に変換する。
-変換したデータを perception_eval に渡して評価を依頼し、結果を受け取って、可視化のために ROS の topic で結果を publish する部分を担当する。</p>
-<p>perception_eval は、driving_log_replayer から渡された検知結果と GroundTruth を比較して指標を計算し、結果を出力する部分を担当する。</p>
-<h2 id="_4">評価方法</h2>
-<p>driving_log_replayer/launch/perception.launch.py を用いて、評価用のノードを autoware_launch の logging_simulator.launch と一緒に立ち上げる。</p>
-<h2 id="topic">評価ノードが使用する Topic とデータ型</h2>
-<ul>
-<li>subscribe</li>
-</ul>
+
+<h1 id="evaluate-perception">Evaluate perception<a class="headerlink" href="#evaluate-perception" title="Permanent link">#</a></h1>
+<p>The performance of Autoware's recognition function (perception) is evaluated by calculating mAP (mean Average Precision) and other indices from the recognition results.</p>
+<p>Run the perception module and pass the output perception topic to the evaluation library for evaluation.</p>
+<h2 id="evaluation-method">Evaluation method<a class="headerlink" href="#evaluation-method" title="Permanent link">#</a></h2>
+<p>The perception evaluation is executed by launching the <code>perception.launch.py</code> file.
+Launching the file executes the following steps:</p>
+<ol>
+<li>Execute launch of evaluation node (<code>perception_evaluator_node</code>), <code>logging_simulator.launch</code> file and <code>ros2 bag play</code> command</li>
+<li>Autoware receives sensor data output from input rosbag and outputs point cloud data, and the perception module performs recognition.</li>
+<li>The evaluation node subscribes to <code>/perception/object_recognition/{detection, tracking}/objects</code> and evaluates data. The result is dumped into a file.</li>
+<li>When the playback of the rosbag is finished, Autoware's launch is automatically terminated, and the evaluation is completed.</li>
+</ol>
+<h3 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">#</a></h3>
+<p>Autoware's perception module is launched for the first time, it converts <code>onnx</code> files in <code>lidar_centerpoint</code> package.
+In step 1 of the evaluation method, there is a long, seemingly halting process as it waits for the conversion to complete.
+This is normal operation, so please do not stop with keyboard input, but wait as is.</p>
+<h2 id="evaluation-results">Evaluation results<a class="headerlink" href="#evaluation-results" title="Permanent link">#</a></h2>
+<p>The results are calculated for each subscription. The format and available states are described below.</p>
+<h3 id="perception-normal">Perception Normal<a class="headerlink" href="#perception-normal" title="Permanent link">#</a></h3>
+<p>If no object fail the evaluation function <code>perception_eval</code> (<code>frame_result.pass_fail_result.get_fail_object_num() == 0</code>).</p>
+<h3 id="perception-error">Perception Error<a class="headerlink" href="#perception-error" title="Permanent link">#</a></h3>
+<p>The perception evaluation output is marked as <code>Error</code> when condition for <code>Normal</code> is not met.</p>
+<h2 id="topic-name-and-data-type-used-by-evaluation-node">Topic name and data type used by evaluation node<a class="headerlink" href="#topic-name-and-data-type-used-by-evaluation-node" title="Permanent link">#</a></h2>
+<p>Subscribed topics:</p>
 <table>
 <thead>
 <tr>
-<th>topic 名</th>
-<th>データ型</th>
+<th>Topic name</th>
+<th>Data type</th>
 </tr>
 </thead>
 <tbody>
@@ -1025,14 +1195,12 @@
 </tr>
 </tbody>
 </table>
-<ul>
-<li>publish</li>
-</ul>
+<p>Published topics:</p>
 <table>
 <thead>
 <tr>
-<th>topic 名</th>
-<th>データ型</th>
+<th>Topic name</th>
+<th>Data type</th>
 </tr>
 </thead>
 <tbody>
@@ -1046,156 +1214,128 @@
 </tr>
 </tbody>
 </table>
-<h3 id="logging_simulatorlaunch">logging_simulator.launch に渡す引数</h3>
-<p>autoware の処理を軽くするため、評価に関係のないモジュールは launch の引数に false を渡すことで無効化する。以下を設定している。
-アノーテション時とシミュレーション時で自己位置を合わせたいので bag に入っている tf を使い回す。そのため localization は無効である。</p>
+<h2 id="arguments-passed-to-logging_simulatorlaunch">Arguments passed to logging_simulator.launch<a class="headerlink" href="#arguments-passed-to-logging_simulatorlaunch" title="Permanent link">#</a></h2>
+<p>To make Autoware processing less resource-consuming, modules that are not relevant to evaluation are disabled by passing the <code>false</code> parameter as a launch argument.
+The following parameters are set to <code>false</code> when launching the <code>perception</code> evaluation scenario:</p>
 <ul>
 <li>localization: false</li>
 <li>planning: false</li>
 <li>control: false</li>
-<li>sensing: false / true (デフォルト false、シナリオで指定する)</li>
+<li>sensing: false / true (default value is false. Specify by <code>LaunchSensing</code> key for each t4_dataset in the scenario)</li>
 </ul>
-<p>autoware から出力される認識結果(/perception/object_recognition/detection/objects)を Ground Truth データと比較して評価する。
-評価には、perception_eval を利用する。</p>
-<h3 id="_5">正常</h3>
-<p>perception_eval の関数を使って評価失敗のオブジェクトが 0 個の場合、frame_result.pass_fail_result.get_fail_object_num() # 0</p>
-<h3 id="_6">異常</h3>
-<p>perception_eval の関数を使って評価失敗のオブジェクトが存在する場合、frame_result.pass_fail_result.get_fail_object_num() &gt; 0</p>
-<h3 id="_7">評価フロー</h3>
-<ol>
-<li>launch で評価ノード(perception_evaluator_node)と logging_simulator.launch、ros2 bag play を立ち上げる</li>
-<li>bag から出力されたセンサーデータを autoware が受け取って、perception モジュールで認識を行う</li>
-<li>評価ノードが/perception/object_recognition/{detection, tracking}/objects を subscribe して、コールバックで perception_eval の関数を用いて評価を行う</li>
-</ol>
-<h2 id="simulation">simulation</h2>
-<p>シミュレーション実行に必要な情報を述べる。</p>
-<h3 id="rosbag-topic">入力 rosbag に含まれるべき topic</h3>
-<p>車両の ECU の CAN と、使用している sensor の topic が必要
-以下は例であり、違うセンサーを使っている場合は適宜読み替える。</p>
-<p>LiDAR が複数ついている場合は、搭載されているすべての LiDAR の packets を含める</p>
-<ul>
-<li>/sensing/gnss/ublox/fix_velocity</li>
-<li>/sensing/gnss/ublox/nav_sat_fix</li>
-<li>/sensing/gnss/ublox/navpvt</li>
-<li>/sensing/imu/tamagawa/imu_raw</li>
-<li>/sensing/lidar/*/velodyne_packets</li>
-<li>/gsm8/from_can_bus</li>
-<li>/tf</li>
-</ul>
-<p>tf は実験時に取得したものをそのまま使用するか、rosbag replay simulation で取得しなおす。</p>
-<h3 id="rosbag-topic_1">入力 rosbag に含まれてはいけない topic</h3>
-<ul>
-<li>/clock</li>
-</ul>
-<h2 id="evaluation">evaluation</h2>
-<p>評価に必要な情報を述べる。</p>
-<h3 id="_8">シナリオフォーマット</h3>
-<p>ユースケース評価とデータベース評価の 2 種類の評価がある。
-ユースケースは 1 個のデータセットで行う評価で、データベースは複数のデータセットを用いて、各データセット毎の結果の平均を取る評価である。</p>
-<p>クラウドで実行されるときは、並列に実行されることも考慮にいれると Dataset 毎の設定を配列で記述する以下のような形式とする。
-データベース評価では、キャリブレーション値の変更があり得るので vehicle_id をデータセット毎に設定出来るようにする。
-また、Sensing モジュールを起動するかどうかの設定も行う。
-追加でデータセット毎に必要な設定項目が出てきたら、キーを追加して設定する。</p>
-<p>成否判定に関しては perception_eval に判定の条件を渡すことで結果を出すときに成否の判定も同時にされるので、判定条件をシナリオに記載する。</p>
-<p>記述形式は以下の yaml のようになっており、PerceptionEvaluationConfig、CriticalObjectFilterConfig、PerceptionPassFailConfig の 3 種類を記述する。
-各設定オブジェクトに追加や削除があればそれに合わせてシナリオの Config の項目も追加・削除する。</p>
-<pre><code class="language-yaml">Evaluation:
-  UseCaseName: perception
-  UseCaseFormatVersion: 0.3.0
-  Datasets:
-    - f72e1065-7c38-40fe-a4e2-c5bbe6ff6443:
-        VehicleId: ps1/20210620/CAL_000015 # データセット毎にVehicleIdを指定する
-        LaunchSensing: false # データセット毎にsensing moduleを起動するかを指定する
-        LocalMapPath: $HOME/map/perception # データセット毎にLocalMapPathを指定する
-  Conditions:
-    PassRate: 99.0 # 評価試行回数の内、どの程度(%)評価成功だったら成功とするか
-  PerceptionEvaluationConfig:
-    evaluation_config_dict:
-      evaluation_task: detection # detection/tracking ここで指定したobjectsを評価する
-      target_labels: [car, bicycle, pedestrian, motorbike] # 評価ラベル
-      max_x_position: 102.4 # 評価対象 object の最大 x 位置
-      max_y_position: 102.4 # 評価対象 object の最大 y 位置
-      max_distance: null # 評価対象 object の base_link からの最大距離、max_x_potion, max_y_positionと排他利用、この例ではこちらはnull
-      min_distance: null # 評価対象 object の base_link からの最小距離、max_x_potion, max_y_positionと排他利用、この例ではこちらはnull
-      min_point_numbers: [0, 0, 0, 0] # ground truth object における，bbox 内の最小点群数．min_point_numbers=0 の場合は，全 ground truth object を評価
-      confidence_threshold: null # 評価対象の estimated object の confidence の閾値
-      target_uuids: null # 特定の ground truth のみに対して評価を行いたい場合，対象とする ground truth の UUID を指定する。nullなら全てが対象
-      center_distance_thresholds: [[1.0, 1.0, 1.0, 1.0], [2.0, 2.0, 2.0, 2.0]] # 中心間距離マッチング時の閾値
-      plane_distance_thresholds: [2.0, 30.0] # 平面距離マッチング時の閾値
-      iou_bev_thresholds: [0.5] # BEV IoU 　マッチング時の閾値
-      iou_3d_thresholds: [0.5] # 3D IoU マッチング時の閾値
-  CriticalObjectFilterConfig:
-    target_labels: [car, bicycle, pedestrian, motorbike] # 評価対象ラベル名
-    max_x_position_list: [30.0, 30.0, 30.0, 30.0] # 評価対象 object の最大 x 位置
-    max_y_position_list: [30.0, 30.0, 30.0, 30.0] # 評価対象 object の最大 y 位置
-    max_distance_list: null # 評価対象 object の base_link からの最大距離、max_x_potion, max_y_positionと排他利用、この例ではこちらはnull
-    min_distance_list: null # 評価対象 object の base_link からの最小距離、max_x_potion, max_y_positionと排他利用、この例ではこちらはnull
-    min_point_numbers: [0, 0, 0, 0] # ground truth object における，bbox 内の最小点群数．min_point_numbers=0 の場合は，全 ground truth object を評価
-    confidence_threshold_list: null # 評価対象の estimated object の confidence の閾値
-    target_uuids: null # 特定の ground truth のみに対して評価を行いたい場合，対象とする ground truth の UUID を指定する。nullなら全てが対象
-  PerceptionPassFailConfig:
-    target_labels: [car, bicycle, pedestrian, motorbike]
-    plane_distance_threshold_list: [2.0, 2.0, 2.0, 2.0] # 平面距離マッチング時の閾値
-</code></pre>
-<h3 id="_9">評価結果ファイルフォーマット</h3>
-<p>perception では、シナリオに指定した条件で perception_eval が評価した結果を各 frame 毎に出力する。
-全てのデータを流し終わったあとに、最終的なメトリクスを計算しているため、最終行だけ、他の行と形式が異なる。</p>
-<p>以下に、各フレームのフォーマットとメトリクスのフォーマットを示す。
-ただし、結果ファイルフォーマットで解説済みの共通部分については省略する。</p>
-<p>各フレームのフォーマット</p>
-<pre><code class="language-json">{
-  &quot;Frame&quot;: {
-    &quot;FrameName&quot;: &quot;評価に使用したt4_datasetのフレーム番号&quot;,
-    &quot;FrameSkip&quot;: &quot;objectの評価を依頼したがdatasetに75msec以内の真値がなく評価を飛ばされた回数&quot;,
-    &quot;PassFail&quot;: {
-      &quot;Result&quot;: &quot;Success or Fail&quot;,
-      &quot;Info&quot;: [
-        {
-          &quot;TP&quot;: &quot;TPと判定された数&quot;,
-          &quot;FP&quot;: &quot;FPと判定された数&quot;,
-          &quot;FN&quot;: &quot;FNと判定された数&quot;
-        }
-      ]
-    }
-  }
-}
-</code></pre>
-<p>メトリクスデータのフォーマット</p>
-<pre><code class="language-json">{
-  &quot;Frame&quot;: {
-    &quot;FinalScore&quot;: {
-      &quot;Score&quot;: {
-        &quot;TP&quot;: &quot;ラベル毎のTP率&quot;,
-        &quot;FP&quot;: &quot;ラベル毎のFP率&quot;,
-        &quot;FN&quot;: &quot;ラベル毎のFN率&quot;,
-        &quot;AP&quot;: &quot;ラベル毎のAP値&quot;,
-        &quot;APH&quot;: &quot;ラベル毎のAPH値&quot;
-      },
-      &quot;Error&quot;: {
-        &quot;ラベル&quot;: &quot;ラベル毎の値との誤差メトリクス&quot;
-      }
-    }
-  }
-}
-</code></pre>
-<h3 id="pickle">pickle ファイル</h3>
-<p>perception の評価では、result.json の他に scene_result.pkl というファイルを出力する。
-pickle ファイルは python のオブジェクトをファイルとして保存したものであり、perception_eval の PerceptionEvaluationManager.frame_results を保存している。</p>
-<p>perception の評価は、1 個のデータセットで行うユースケース評価と、複数のデータセットを用いて各データセット毎の結果の平均を取るデータベース評価がある。
-ROS の仕様上、1 回の launch で、複数のデータセット(bag、地図、アノテーションファイルの集合)を渡して連続で実行することは出来ない。
-1 組のデータセットに対して launch を 1 回叩くことなるので、データベース評価を実施するには、含まれるデータセットの数だけ launch を実行する必要がある。</p>
-<p>なので、それぞれのデータセットに対して実行した frame_results を pickle ファイルで保存し、全てのデータセットで pickle ファイルが作成されたあとに frame_results を結合して最終的な結果を出すという運用を想定している。</p>
-<p>pickle ファイルを使用するサンプル実装を driving_log_replayer/scripts/perception_load_scene_result.py に置いているので参照されたい。</p>
+<p><strong>NOTE: The <code>tf</code> in the bag is used to align the localization during annotation and simulation. Therefore, localization is invalid.</strong></p>
+<h2 id="dependent-libraries">Dependent libraries<a class="headerlink" href="#dependent-libraries" title="Permanent link">#</a></h2>
+<p>The perception evaluation step bases on the <a href="https://github.com/tier4/autoware_perception_evaluation">perception_eval</a> library.</p>
+<h3 id="division-of-roles-of-driving_log_replayer-with-dependent-libraries">Division of roles of driving_log_replayer with dependent libraries<a class="headerlink" href="#division-of-roles-of-driving_log_replayer-with-dependent-libraries" title="Permanent link">#</a></h3>
+<p><code>driving_log_replayer</code> package is in charge of the connection with ROS. The actual perception evaluation is conducted in <a href="https://github.com/tier4/autoware_perception_evaluation">perception_eval</a> library.
+The <a href="https://github.com/tier4/autoware_perception_evaluation">perception_eval</a> is a ROS-independent library, it cannot receive ROS objects. Also, ROS timestamps use nanoseconds while the <code>t4_dataset</code> format is based on milliseconds (because it uses <code>nuScenes</code>), so the values must be properly converted before using the library's functions.</p>
+<p><code>driving_log_replayer</code> subscribes the topic output from the perception module of Autoware, converts it to the data format expected by <a href="https://github.com/tier4/autoware_perception_evaluation">perception_eval</a>, and passes it on.
+It is also responsible for publishing and visualizing the evaluation results from <a href="https://github.com/tier4/autoware_perception_evaluation">perception_eval</a> on proper ROS topic.</p>
+<p><a href="https://github.com/tier4/autoware_perception_evaluation">perception_eval</a> is in charge of the part that compares the detection results passed from <code>driving_log_replayer</code> with ground truth data, calculates the index, and outputs the results.</p>
+<h2 id="about-simulation">About simulation<a class="headerlink" href="#about-simulation" title="Permanent link">#</a></h2>
+<p>State the information required to run the simulation.</p>
+<h3 id="topic-to-be-included-in-the-input-rosbag">Topic to be included in the input rosbag<a class="headerlink" href="#topic-to-be-included-in-the-input-rosbag" title="Permanent link">#</a></h3>
+<p>Must contain the required topics in <code>t4_dataset</code> format.</p>
+<h2 id="about-evaluation">About Evaluation<a class="headerlink" href="#about-evaluation" title="Permanent link">#</a></h2>
+<p>State the information necessary for the evaluation.</p>
+<h3 id="scenario-format">Scenario Format<a class="headerlink" href="#scenario-format" title="Permanent link">#</a></h3>
+<p>There are two types of evaluation: use case evaluation and database evaluation.
+Use case evaluation is performed on a single dataset, while database evaluation uses multiple datasets and takes the average of the results for each dataset.</p>
+<p>In the database evaluation, the <code>vehicle_id</code> should be able to be set for each data set, since the calibration values may change.
+Also, it is necessary to set whether or not to activate the sensing module.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">Evaluation</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">UseCaseName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">perception</span><span class="w"></span>
+<span class="w">  </span><span class="nt">UseCaseFormatVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.3.0</span><span class="w"></span>
+<span class="w">  </span><span class="nt">Datasets</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">sample_dataset</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">VehicleId</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span><span class="w"></span>
+<span class="w">        </span><span class="nt">LaunchSensing</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
+<span class="w">        </span><span class="nt">LocalMapPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$HOME/autoware_map/sample-map-planning</span><span class="w"></span>
+<span class="w">  </span><span class="nt">Conditions</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">PassRate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">99.0</span><span class="w"> </span><span class="c1"># How much (%) of the evaluation attempts are considered successful.</span><span class="w"></span>
+<span class="w">  </span><span class="nt">PerceptionEvaluationConfig</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">evaluation_config_dict</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">evaluation_task</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">detection</span><span class="w"> </span><span class="c1"># detection or tracking. Evaluate the objects specified here</span><span class="w"></span>
+<span class="w">      </span><span class="nt">target_labels</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">car</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">bicycle</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">pedestrian</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">motorbike</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="c1"># evaluation label</span><span class="w"></span>
+<span class="w">      </span><span class="nt">max_x_position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">102.4</span><span class="w"> </span><span class="c1"># Maximum x position of object to be evaluated</span><span class="w"></span>
+<span class="w">      </span><span class="nt">max_y_position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">102.4</span><span class="w"> </span><span class="c1"># Maximum y position of object to be evaluated</span><span class="w"></span>
+<span class="w">      </span><span class="nt">max_distance</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span><span class="w"> </span><span class="c1"># Maximum distance from the base_link of the object to be evaluated. Exclusive use with max_x_potion, max_y_position.</span><span class="w"></span>
+<span class="w">      </span><span class="nt">min_distance</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span><span class="w"> </span><span class="c1"># Minimum distance from the base_link of the object to be evaluated. Exclusive use with max_x_potion, max_y_position.</span><span class="w"></span>
+<span class="w">      </span><span class="nt">min_point_numbers</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="c1"># Minimum number of point clouds in bounding box for ground truth object. If min_point_numbers=0, all ground truth objects are evaluated</span><span class="w"></span>
+<span class="w">      </span><span class="nt">confidence_threshold</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span><span class="w"> </span><span class="c1"># Threshold of confidence for the estimated object to be evaluated</span><span class="w"></span>
+<span class="w">      </span><span class="nt">target_uuids</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span><span class="w"> </span><span class="c1"># If you want to evaluate only specific ground truths, specify the UUIDs of the ground truths to be evaluated. If null, use all</span><span class="w"></span>
+<span class="w">      </span><span class="nt">center_distance_thresholds</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[[</span><span class="nv">1.0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1.0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1.0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1.0</span><span class="p p-Indicator">],</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">2.0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">2.0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">2.0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">2.0</span><span class="p p-Indicator">]]</span><span class="w"> </span><span class="c1"># Threshold for center-to-center distance matching</span><span class="w"></span>
+<span class="w">      </span><span class="nt">plane_distance_thresholds</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">2.0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">30.0</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="c1"># Threshold for planar distance matching</span><span class="w"></span>
+<span class="w">      </span><span class="nt">iou_bev_thresholds</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">0.5</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="c1"># Threshold for BEV IoU</span><span class="w"></span>
+<span class="w">      </span><span class="nt">iou_3d_thresholds</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">0.5</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="c1"># Threshold for 3D IoU</span><span class="w"></span>
+<span class="w">  </span><span class="nt">CriticalObjectFilterConfig</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">target_labels</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">car</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">bicycle</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">pedestrian</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">motorbike</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="w">    </span><span class="nt">max_x_position_list</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">30.0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">30.0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">30.0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">30.0</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="w">    </span><span class="nt">max_y_position_list</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">30.0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">30.0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">30.0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">30.0</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="w">    </span><span class="nt">max_distance_list</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span><span class="w"></span>
+<span class="w">    </span><span class="nt">min_distance_list</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span><span class="w"></span>
+<span class="w">    </span><span class="nt">min_point_numbers</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="w">    </span><span class="nt">confidence_threshold_list</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span><span class="w"></span>
+<span class="w">    </span><span class="nt">target_uuids</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span><span class="w"></span>
+<span class="w">  </span><span class="nt">PerceptionPassFailConfig</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">target_labels</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">car</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">bicycle</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">pedestrian</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">motorbike</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="w">    </span><span class="nt">plane_distance_threshold_list</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">2.0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">2.0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">2.0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">2.0</span><span class="p p-Indicator">]</span><span class="w"></span>
+</code></pre></div>
+<h3 id="evaluation-result-format">Evaluation Result Format<a class="headerlink" href="#evaluation-result-format" title="Permanent link">#</a></h3>
+<p>The evaluation results by <a href="https://github.com/tier4/autoware_perception_evaluation">perception_eval</a> under the conditions specified in the scenario are output for each frame.
+Only the final line has a different format from the other lines since the final metrics are calculated after all data has been flushed.</p>
+<p>The format of each frame and the metrics format are shown below.
+<strong>NOTE: common part of the result file format, which has already been explained, is omitted.</strong></p>
+<p>Format of each frame:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;Frame&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;FrameName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Frame number of t4_dataset used for evaluation&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;FrameSkip&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Number of times that an object was requested to be evaluated but the evaluation was skipped because there was no ground truth in the dataset within 75msec&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;PassFail&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;Result&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Success or Fail&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;Info&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;TP&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Number of TPs&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;FP&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Number of FPs&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;FN&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Number of FNs&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">]</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Metrics Data Format:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;Frame&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;FinalScore&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;Score&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;TP&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TP rate of the label&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;FP&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FP rate of the label&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;FN&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FN rate of the label&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;AP&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AP value of the label&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;APH&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;APH value of the label&quot;</span><span class="w"></span>
+<span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;Error&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;Label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Error metrics for the label&quot;</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h3 id="pickle-file">pickle file<a class="headerlink" href="#pickle-file" title="Permanent link">#</a></h3>
+<p>In database evaluation, it is necessary to replay multiple rosbags, but due to the ROS specification, it is impossible to use multiple bags in a single launch.
+Since one rosbag, i.e., one <code>t4_dataset</code>, requires one launch, it is necessary to execute as many launches as the number of datasets contained in the database evaluation.</p>
+<p>Since database evaluation cannot be done in a single launch, perception outputs a file <code>scene_result.pkl</code> in addition to <code>result.jsonl</code> file.
+A pickle file is a python object saved as a file, PerceptionEvaluationManager.frame_results of <a href="https://github.com/tier4/autoware_perception_evaluation">perception_eval</a>.
+The dataset evaluation can be performed by reading all the objects recorded in the pickle file and outputting the index of the dataset's average.</p>
+<h3 id="result-file-of-database-evaluation">Result file of database evaluation<a class="headerlink" href="#result-file-of-database-evaluation" title="Permanent link">#</a></h3>
+<p>In the case of a database evaluation with multiple datasets in the scenario, a file named <code>database_result.json</code> is output to the results directory.</p>
+<p>The format is the same as the <a href="#evaluation-result-format">Metrics Data Format</a>.</p>
 
-
-
-
-
-                
-              </article>
-            </div>
-          
-          
+              
+            </article>
+            
+          </div>
         </div>
         
           <a href="#" class="md-top md-icon" data-md-component="top" hidden>
@@ -1211,7 +1351,7 @@ ROS の仕様上、1 回の launch で、複数のデータセット(bag、地�
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../obstacle_segmentation/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 点群生成の評価" rel="prev">
+        <a href="../obstacle_segmentation/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Evaluate point cloud generation" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1220,20 +1360,20 @@ ROS の仕様上、1 回の launch で、複数のデータセット(bag、地�
               <span class="md-footer__direction">
                 Previous
               </span>
-              点群生成の評価
+              Evaluate point cloud generation
             </div>
           </div>
         </a>
       
       
         
-        <a href="../performance_diag/" class="md-footer__link md-footer__link--next" aria-label="Next: 診断機能の評価" rel="next">
+        <a href="../performance_diag/" class="md-footer__link md-footer__link--next" aria-label="Next: Evaluate diagnostics" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              診断機能の評価
+              Evaluate diagnostics
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -1267,11 +1407,10 @@ ROS の仕様上、1 回の launch で、複数のデータセット(bag、地�
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../assets/javascripts/workers/search.85cb4492.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
-    
-      <script src="../../assets/javascripts/bundle.8492ddcf.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a877e258.min.js"></script>
       
     
   </body>

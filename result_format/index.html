@@ -11,22 +11,21 @@
         <link rel="canonical" href="https://tier4.github.io/driving_log_replayer/result_format/">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.6">
     
     
       
-        <title>Driving Log Replayer 結果ファイルフォーマット - Driving Log Replayer Documentation</title>
+        <title>Driving Log Replayer Result File Format - Driving Log Replayer Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.20d9efc8.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.4a0965b7.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
         
       
       
-
     
     
     
@@ -39,11 +38,10 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
-    
     
     
   </head>
@@ -68,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#driving-log-replayer" class="md-skip">
+        <a href="#driving-log-replayer-result-file-format" class="md-skip">
           Skip to content
         </a>
       
@@ -76,6 +74,12 @@
     <div data-md-component="announce">
       
     </div>
+    
+      <div data-md-component="outdated" hidden>
+        <aside class="md-banner md-banner--warning">
+          
+        </aside>
+      </div>
     
     
       
@@ -103,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Driving Log Replayer 結果ファイルフォーマット
+              Driving Log Replayer Result File Format
             
           </span>
         </div>
@@ -133,6 +137,32 @@
       </form>
     
     
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="../" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="../ja/" hreflang="ja" class="md-select__link">
+                    日本語
+                  </a>
+                </li>
+                
+            </ul>
+          </div>
+        </div>
+      </div>
+    
     
       <label class="md-header__button md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
@@ -148,7 +178,7 @@
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
@@ -172,7 +202,7 @@
         <a href="https://github.com/tier4/driving_log_replayer" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -209,8 +239,24 @@
   
   
     <li class="md-tabs__item">
-      <a href="../introduction/" class="md-tabs__link">
-        Introduction
+      <a href="../quick_start/installation/" class="md-tabs__link">
+        Quick start
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../overview/" class="md-tabs__link">
+        Overview
       </a>
     </li>
   
@@ -306,7 +352,7 @@
       <a href="https://github.com/tier4/driving_log_replayer" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -348,7 +394,9 @@
       
         
           
-            
+        
+          
+        
           
         
           
@@ -359,34 +407,26 @@
         
       
       
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="../introduction/">Introduction</a>
-          
-            <label for="__nav_2">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
+        <label class="md-nav__link" for="__nav_2">
+          Quick start
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
-      <nav class="md-nav" aria-label="Introduction" data-md-level="1">
+      <nav class="md-nav" aria-label="Quick start" data-md-level="1">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
-          Introduction
+          Quick start
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
             
-          
-            
               
   
   
   
     <li class="md-nav__item">
-      <a href="../introduction/overview/" class="md-nav__link">
-        パッケージ概要
+      <a href="../quick_start/installation/" class="md-nav__link">
+        Installation
       </a>
     </li>
   
@@ -399,8 +439,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../introduction/preparation/" class="md-nav__link">
-        準備
+      <a href="../quick_start/setup/" class="md-nav__link">
+        Setup
       </a>
     </li>
   
@@ -413,8 +453,50 @@
   
   
     <li class="md-nav__item">
-      <a href="../introduction/run/" class="md-nav__link">
-        起動方法
+      <a href="../quick_start/localization/" class="md-nav__link">
+        Localization Evaluation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quick_start/obstacle_segmentation/" class="md-nav__link">
+        Obstacle Segmentation Evaluation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quick_start/perception/" class="md-nav__link">
+        Perception Evaluation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quick_start/performance_diag/" class="md-nav__link">
+        Performance Diag Evaluation
       </a>
     </li>
   
@@ -447,6 +529,86 @@
             
           
         
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../overview/">Overview</a>
+          
+            <label for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Overview" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Overview
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/command/" class="md-nav__link">
+        Command
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+        
+          
+            
+          
+        
       
       
         
@@ -457,7 +619,7 @@
         </div>
       
       <nav class="md-nav" aria-label="Scenario format" data-md-level="1">
-        <label class="md-nav__title" for="__nav_3">
+        <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           Scenario format
         </label>
@@ -484,7 +646,7 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       
       
@@ -503,7 +665,7 @@
         </div>
       
       <nav class="md-nav" aria-label="Result format" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
+        <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Result format
         </label>
@@ -528,7 +690,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
       
       
@@ -552,14 +714,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../use_case/">Use case</a>
           
-            <label for="__nav_5">
+            <label for="__nav_6">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
       <nav class="md-nav" aria-label="Use case" data-md-level="1">
-        <label class="md-nav__title" for="__nav_5">
+        <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
           Use case
         </label>
@@ -574,7 +736,7 @@
   
     <li class="md-nav__item">
       <a href="../use_case/localization/" class="md-nav__link">
-        自己位置推定の評価
+        Evaluate self-localization estimation
       </a>
     </li>
   
@@ -588,7 +750,7 @@
   
     <li class="md-nav__item">
       <a href="../use_case/obstacle_segmentation/" class="md-nav__link">
-        点群生成の評価
+        Evaluate point cloud generation
       </a>
     </li>
   
@@ -602,7 +764,7 @@
   
     <li class="md-nav__item">
       <a href="../use_case/perception/" class="md-nav__link">
-        認識機能の評価
+        Evaluate perception
       </a>
     </li>
   
@@ -616,7 +778,7 @@
   
     <li class="md-nav__item">
       <a href="../use_case/performance_diag/" class="md-nav__link">
-        診断機能の評価
+        Evaluate diagnostics
       </a>
     </li>
   
@@ -656,22 +818,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    フォーマット
+  <a href="#format" class="md-nav__link">
+    Format
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#json" class="md-nav__link">
-    json ファイルの出力
+  <a href="#output-json-file" class="md-nav__link">
+    Output JSON file
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    結果ファイルの分析
+  <a href="#analyze-the-result-files" class="md-nav__link">
+    Analyze the result files
   </a>
   
 </li>
@@ -684,69 +846,61 @@
               </div>
             
           
-          
-            <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
                 
-                  
-
-  <a href="https://github.com/tier4/driving_log_replayer/edit/main/docs/result_format/index.md" title="Edit this page" class="md-content__button md-icon">
-    
+  <a href="https://github.com/tier4/driving_log_replayer/edit/main/docs/result_format/index.en.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="driving-log-replayer">Driving Log Replayer 結果ファイルフォーマット</h1>
-<p>driving_log_replayer で出力される結果ファイルのフォーマットについて述べる。</p>
-<p>1 行毎に json フォーマットの文字列が入っている jsonl ファイル形式となっている。
-評価モジュール毎に評価内容が違うので、出力される内容は異なるが大枠を揃えることでみやすさや、スクリプトでの加工しやすくする。</p>
-<h2 id="_1">フォーマット</h2>
-<p>各行以下の形式のフォーマットで出力される。
-実際には一行の文字列だがみやすさのためにフォーマットしている。</p>
-<pre><code class="language-json">{
-  &quot;Result&quot;: {
-    &quot;Success&quot;: &quot;true or false&quot;,
-    &quot;Summary&quot;: &quot;評価した結果の要約&quot;
-  },
-  &quot;Stamp&quot;: {
-    &quot;System&quot;: &quot;コンピュータの時刻 UNIX_TIME&quot;,
-    &quot;ROS&quot;: &quot;シミュレーションの時刻&quot;
-  },
-  &quot;Frame&quot;: {
-    &quot;Ego&quot;: { &quot;TransformStamped&quot;: &quot;mapからbase_linkへのtransform_stamped&quot; },
-    &quot;評価毎に構成が異なる&quot;: &quot;...&quot;
-  }
-}
-</code></pre>
+
+<h1 id="driving-log-replayer-result-file-format">Driving Log Replayer Result File Format<a class="headerlink" href="#driving-log-replayer-result-file-format" title="Permanent link">#</a></h1>
+<p>It is in JSONL format, with each line containing a string in JSON format.</p>
+<h2 id="format">Format<a class="headerlink" href="#format" title="Permanent link">#</a></h2>
+<p>Each line is output in the following format.
+The actual output is a single line of text, but it is formatted for ease of reading.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;Result&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;Success&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;true or false&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;Summary&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;summary of result&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;Stamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;System&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;system time&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;ROS&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;simulation time&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;Frame&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;Ego&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;TransformStamped&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;transform_stamped from map to base_link&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;Different configurations for each use case&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Each evaluation output consists of the following attributes:</p>
 <ul>
-<li>Result: 実行したシナリオの評価結果</li>
-<li>Stamp: 評価した時刻</li>
-<li>Frame: 受け取った frame(topic)1 回分の評価結果と、判定に使用した値などの付属情報</li>
+<li>Result: Result of the evaluation of the executed scenario</li>
+<li>Stamp: The time of the evaluation</li>
+<li>Frame: Evaluation results for one received frame (topic) and attached information such as values used for judgment.</li>
 </ul>
-<p>Frame の中身の詳細については、各ユースケースの評価結果ファイルフォーマットを参照。</p>
-<h2 id="json">json ファイルの出力</h2>
-<p>プログラムで結果ファイルを作る都合で、追記可能で扱いやすいファーマットとして jsonl を採用している。
-しかし、人が目で見て結果を確認する場合は、json 形式にして vscode 等でフォーマットして構造化したほうが理解しやすい。
-そのため、driving_log_replayer_cli を用いてシミュレーション実行した場合はデフォルトで jsonl ファイルを json に変換したファイルも出力される。</p>
-<p>一方、ローカルで wasim で実行した場合や、クラウドで実行した場合は jsonl ファイルしか作られない。
-jsonl ファイルを json に出力したい場合は、以下のコマンドで変換することができる。</p>
-<pre><code class="language-shell"># 結果ファイルの変換、output_directory以下のresult.jsonlをresult.jsonに変換する
-driving_log_replayer simulation convert-result ${output_directory}
-</code></pre>
-<h2 id="_2">結果ファイルの分析</h2>
-<p>json 出力の項目でも述べた通り、json ファイルの出力はローカルで driving_log_replayer_cli を用いた場合のみ出力される。
-なので、結果ファイルをグラフ化するなどの解析作業を行う場合は、jsonl のまま扱えるようにすると変換の手間が減らせる。</p>
-<p>python を用いる場合は、<a href="https://qiita.com/meshidenn/items/3ff72396fe85044bc74f" title="pandas">pandas を使用すると jsonl をのそのまま読み込むことができる</a></p>
+<p>For more information on Frame, see the evaluation results file format for each use case.</p>
+<h2 id="output-json-file">Output JSON file<a class="headerlink" href="#output-json-file" title="Permanent link">#</a></h2>
+<p>JSONL is used because it can be appended, and one result will be added per topic subscription.
+However, it is easier to read a JSON file format when investigating the files manually.
+Therefore, when simulations are run using driving_log_replayer_cli, the JSON file is also output by default.</p>
+<p>On the other hand, if the simulation is run locally with <a href="https://docs.web.auto/en/developers-guides/wasim/use-cases/run-simulations-locally/">wasim</a> or in <a href="https://docs.web.auto/en/user-manuals/evaluator/introduction">the cloud</a>, only a JSONL file is created.
+If you want to convert a JSONL file to JSON, you can do so with the following command.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Conversion of result files, converting result.jsonl under output_directory to result.json</span>
+driving_log_replayer simulation convert-result <span class="si">${</span><span class="nv">output_directory</span><span class="si">}</span>
+</code></pre></div>
+<h2 id="analyze-the-result-files">Analyze the result files<a class="headerlink" href="#analyze-the-result-files" title="Permanent link">#</a></h2>
+<p>As mentioned in the json output section, json files are output only when driving_log_replayer_cli is used locally.
+Therefore, when analyzing the result files, such as graphing, jsonl should be used as the analysis target.</p>
+<p>If you use python, you can read jsonl <a href="https://pandas.pydata.org/docs/reference/api/pandas.read_json.html">by setting lines=True in pandas.read_json</a>.</p>
 
-
-
-
-
-                
-              </article>
-            </div>
-          
-          
+              
+            </article>
+            
+          </div>
         </div>
         
           <a href="#" class="md-top md-icon" data-md-component="top" hidden>
@@ -762,7 +916,7 @@ driving_log_replayer simulation convert-result ${output_directory}
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../scenario_format/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Driving Log Replayer シナリオフォーマット定義" rel="prev">
+        <a href="../scenario_format/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Driving Log Replayer Scenario Format Definition" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -771,20 +925,20 @@ driving_log_replayer simulation convert-result ${output_directory}
               <span class="md-footer__direction">
                 Previous
               </span>
-              Driving Log Replayer シナリオフォーマット定義
+              Driving Log Replayer Scenario Format Definition
             </div>
           </div>
         </a>
       
       
         
-        <a href="../use_case/" class="md-footer__link md-footer__link--next" aria-label="Next: 評価ユースケース" rel="next">
+        <a href="../use_case/" class="md-footer__link md-footer__link--next" aria-label="Next: Evaluation Use Cases" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              評価ユースケース
+              Evaluation Use Cases
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -818,11 +972,10 @@ driving_log_replayer simulation convert-result ${output_directory}
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../assets/javascripts/workers/search.85cb4492.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
-    
-      <script src="../assets/javascripts/bundle.8492ddcf.min.js"></script>
+      <script src="../assets/javascripts/bundle.a877e258.min.js"></script>
       
     
   </body>

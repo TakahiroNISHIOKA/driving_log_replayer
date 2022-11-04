@@ -11,22 +11,21 @@
         <link rel="canonical" href="https://tier4.github.io/driving_log_replayer/use_case/obstacle_segmentation/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.6">
     
     
       
-        <title>点群生成の評価 - Driving Log Replayer Documentation</title>
+        <title>Evaluate point cloud generation - Driving Log Replayer Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.20d9efc8.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4a0965b7.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
         
       
       
-
     
     
     
@@ -39,11 +38,10 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
-    
     
     
   </head>
@@ -68,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#evaluate-point-cloud-generation" class="md-skip">
           Skip to content
         </a>
       
@@ -76,6 +74,12 @@
     <div data-md-component="announce">
       
     </div>
+    
+      <div data-md-component="outdated" hidden>
+        <aside class="md-banner md-banner--warning">
+          
+        </aside>
+      </div>
     
     
       
@@ -103,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              点群生成の評価
+              Evaluate point cloud generation
             
           </span>
         </div>
@@ -133,6 +137,32 @@
       </form>
     
     
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="../../" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="../../ja/" hreflang="ja" class="md-select__link">
+                    日本語
+                  </a>
+                </li>
+                
+            </ul>
+          </div>
+        </div>
+      </div>
+    
     
       <label class="md-header__button md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
@@ -148,7 +178,7 @@
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
@@ -172,7 +202,7 @@
         <a href="https://github.com/tier4/driving_log_replayer" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -209,8 +239,24 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../introduction/" class="md-tabs__link">
-        Introduction
+      <a href="../../quick_start/installation/" class="md-tabs__link">
+        Quick start
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../overview/" class="md-tabs__link">
+        Overview
       </a>
     </li>
   
@@ -306,7 +352,7 @@
       <a href="https://github.com/tier4/driving_log_replayer" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -348,7 +394,9 @@
       
         
           
-            
+        
+          
+        
           
         
           
@@ -359,34 +407,26 @@
         
       
       
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="../../introduction/">Introduction</a>
-          
-            <label for="__nav_2">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
+        <label class="md-nav__link" for="__nav_2">
+          Quick start
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
-      <nav class="md-nav" aria-label="Introduction" data-md-level="1">
+      <nav class="md-nav" aria-label="Quick start" data-md-level="1">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
-          Introduction
+          Quick start
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
             
-          
-            
               
   
   
   
     <li class="md-nav__item">
-      <a href="../../introduction/overview/" class="md-nav__link">
-        パッケージ概要
+      <a href="../../quick_start/installation/" class="md-nav__link">
+        Installation
       </a>
     </li>
   
@@ -399,8 +439,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../introduction/preparation/" class="md-nav__link">
-        準備
+      <a href="../../quick_start/setup/" class="md-nav__link">
+        Setup
       </a>
     </li>
   
@@ -413,8 +453,50 @@
   
   
     <li class="md-nav__item">
-      <a href="../../introduction/run/" class="md-nav__link">
-        起動方法
+      <a href="../../quick_start/localization/" class="md-nav__link">
+        Localization Evaluation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick_start/obstacle_segmentation/" class="md-nav__link">
+        Obstacle Segmentation Evaluation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick_start/perception/" class="md-nav__link">
+        Perception Evaluation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick_start/performance_diag/" class="md-nav__link">
+        Performance Diag Evaluation
       </a>
     </li>
   
@@ -447,22 +529,58 @@
             
           
         
+          
+        
+          
+        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../scenario_format/">Scenario format</a>
+          <a href="../../overview/">Overview</a>
+          
+            <label for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
           
         </div>
       
-      <nav class="md-nav" aria-label="Scenario format" data-md-level="1">
+      <nav class="md-nav" aria-label="Overview" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
-          Scenario format
+          Overview
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/command/" class="md-nav__link">
+        Command
+      </a>
+    </li>
+  
+
             
           
         </ul>
@@ -496,12 +614,56 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
+          <a href="../../scenario_format/">Scenario format</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Scenario format" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Scenario format
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
           <a href="../../result_format/">Result format</a>
           
         </div>
       
       <nav class="md-nav" aria-label="Result format" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
+        <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Result format
         </label>
@@ -528,7 +690,7 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
       
       
@@ -552,14 +714,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../">Use case</a>
           
-            <label for="__nav_5">
+            <label for="__nav_6">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
       <nav class="md-nav" aria-label="Use case" data-md-level="1">
-        <label class="md-nav__title" for="__nav_5">
+        <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
           Use case
         </label>
@@ -574,7 +736,7 @@
   
     <li class="md-nav__item">
       <a href="../localization/" class="md-nav__link">
-        自己位置推定の評価
+        Evaluate self-localization estimation
       </a>
     </li>
   
@@ -597,12 +759,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          点群生成の評価
+          Evaluate point cloud generation
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        点群生成の評価
+        Evaluate point cloud generation
       </a>
       
         
@@ -621,65 +783,51 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    評価方法
+  <a href="#evaluation-method" class="md-nav__link">
+    Evaluation method
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#topic" class="md-nav__link">
-    評価ノードが使用する Topic とデータ型
+  <a href="#evaluation-result" class="md-nav__link">
+    Evaluation Result
   </a>
   
-    <nav class="md-nav" aria-label="評価ノードが使用する Topic とデータ型">
+    <nav class="md-nav" aria-label="Evaluation Result">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#logging_simulatorlaunch" class="md-nav__link">
-    logging_simulator.launch に渡す引数
+  <a href="#detection-normal" class="md-nav__link">
+    Detection Normal
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    検知正常
+  <a href="#detection-warning" class="md-nav__link">
+    Detection Warning
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    検知警告
+  <a href="#detection-error" class="md-nav__link">
+    Detection Error
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    検知異常
+  <a href="#non-detection-normal" class="md-nav__link">
+    Non-Detection Normal
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    非検知正常
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    非検知異常
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    評価フロー
+  <a href="#non-detection-error" class="md-nav__link">
+    Non-Detection Error
   </a>
   
 </li>
@@ -690,16 +838,30 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#simulation" class="md-nav__link">
-    simulation
+  <a href="#topic-name-and-data-type-used-by-evaluation-node" class="md-nav__link">
+    Topic name and data type used by evaluation node
   </a>
   
-    <nav class="md-nav" aria-label="simulation">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arguments-passed-to-logging_simulatorlaunch" class="md-nav__link">
+    Arguments passed to logging_simulator.launch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#about-simulation" class="md-nav__link">
+    About simulation
+  </a>
+  
+    <nav class="md-nav" aria-label="About simulation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#rosbag-topic" class="md-nav__link">
-    入力 rosbag に含まれるべき topic
+  <a href="#topic-to-be-included-in-the-input-rosbag" class="md-nav__link">
+    Topic to be included in the input rosbag
   </a>
   
 </li>
@@ -710,23 +872,23 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#evaluation" class="md-nav__link">
-    evaluation
+  <a href="#about-evaluation" class="md-nav__link">
+    About Evaluation
   </a>
   
-    <nav class="md-nav" aria-label="evaluation">
+    <nav class="md-nav" aria-label="About Evaluation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    シナリオフォーマット
+  <a href="#scenario-format" class="md-nav__link">
+    Scenario Format
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    評価結果ファイルフォーマット
+  <a href="#evaluation-result-format" class="md-nav__link">
+    Evaluation Result Format
   </a>
   
 </li>
@@ -752,7 +914,7 @@
   
     <li class="md-nav__item">
       <a href="../perception/" class="md-nav__link">
-        認識機能の評価
+        Evaluate perception
       </a>
     </li>
   
@@ -766,7 +928,7 @@
   
     <li class="md-nav__item">
       <a href="../performance_diag/" class="md-nav__link">
-        診断機能の評価
+        Evaluate diagnostics
       </a>
     </li>
   
@@ -806,65 +968,51 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    評価方法
+  <a href="#evaluation-method" class="md-nav__link">
+    Evaluation method
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#topic" class="md-nav__link">
-    評価ノードが使用する Topic とデータ型
+  <a href="#evaluation-result" class="md-nav__link">
+    Evaluation Result
   </a>
   
-    <nav class="md-nav" aria-label="評価ノードが使用する Topic とデータ型">
+    <nav class="md-nav" aria-label="Evaluation Result">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#logging_simulatorlaunch" class="md-nav__link">
-    logging_simulator.launch に渡す引数
+  <a href="#detection-normal" class="md-nav__link">
+    Detection Normal
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    検知正常
+  <a href="#detection-warning" class="md-nav__link">
+    Detection Warning
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    検知警告
+  <a href="#detection-error" class="md-nav__link">
+    Detection Error
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    検知異常
+  <a href="#non-detection-normal" class="md-nav__link">
+    Non-Detection Normal
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    非検知正常
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    非検知異常
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    評価フロー
+  <a href="#non-detection-error" class="md-nav__link">
+    Non-Detection Error
   </a>
   
 </li>
@@ -875,16 +1023,30 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#simulation" class="md-nav__link">
-    simulation
+  <a href="#topic-name-and-data-type-used-by-evaluation-node" class="md-nav__link">
+    Topic name and data type used by evaluation node
   </a>
   
-    <nav class="md-nav" aria-label="simulation">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arguments-passed-to-logging_simulatorlaunch" class="md-nav__link">
+    Arguments passed to logging_simulator.launch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#about-simulation" class="md-nav__link">
+    About simulation
+  </a>
+  
+    <nav class="md-nav" aria-label="About simulation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#rosbag-topic" class="md-nav__link">
-    入力 rosbag に含まれるべき topic
+  <a href="#topic-to-be-included-in-the-input-rosbag" class="md-nav__link">
+    Topic to be included in the input rosbag
   </a>
   
 </li>
@@ -895,23 +1057,23 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#evaluation" class="md-nav__link">
-    evaluation
+  <a href="#about-evaluation" class="md-nav__link">
+    About Evaluation
   </a>
   
-    <nav class="md-nav" aria-label="evaluation">
+    <nav class="md-nav" aria-label="About Evaluation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    シナリオフォーマット
+  <a href="#scenario-format" class="md-nav__link">
+    Scenario Format
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    評価結果ファイルフォーマット
+  <a href="#evaluation-result-format" class="md-nav__link">
+    Evaluation Result Format
   </a>
   
 </li>
@@ -929,38 +1091,62 @@
               </div>
             
           
-          
-            <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
                 
-                  
-
-  <a href="https://github.com/tier4/driving_log_replayer/edit/main/docs/use_case/obstacle_segmentation.md" title="Edit this page" class="md-content__button md-icon">
-    
+  <a href="https://github.com/tier4/driving_log_replayer/edit/main/docs/use_case/obstacle_segmentation.en.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="_1">点群生成の評価</h1>
-<p>Autoware の点群処理のプロセス(sensing→perception)が動作して、/perception/obstacle_segmentation/pointcloud が意図通りに出力されるかどうかを評価する。</p>
-<p>点群が意図通りに出力されているかの判定は、t4_dataset と点群を用いて行う。</p>
+
+<h1 id="evaluate-point-cloud-generation">Evaluate point cloud generation<a class="headerlink" href="#evaluate-point-cloud-generation" title="Permanent link">#</a></h1>
+<p>Evaluate if the Autoware point cloud generation process (if there is a connection between sensing and perception nodes) runs, and if data is being published to the <code>/perception/obstacle_segmentation/pointcloud</code> topic as intended.</p>
+<p>The following evaluations are performed simultaneously to check if point cloud published by perception nodes is valid.</p>
 <ol>
-<li>事前にアノテーションしておいた車両や歩行者などが検知出来ているかの評価（detection: 検知）</li>
-<li>シナリオで定義した自車両周りとレーンとが重なるエリアに余分な点群が出ていないかの評価（non_detection: 非検知）</li>
+<li>Check whether vehicles, pedestrians and other traffic participants, annotated in advance, are detected (detection step).</li>
+<li>Check whether extra point clouds appear in the overlapping area between the lane and the polygons around the vehicle defined in the scenario (non_detection step).</li>
 </ol>
-<p>の評価を同時に行う。</p>
-<p>アノテーションツールは<a href="https://www.deepen.ai/">Deepen</a>が推奨であるが、t4_dataset への変換がサポートされているツールであればよく、変換ツールさえ作成できれば複数のアノテーションツールを利用することが可能である。</p>
-<h2 id="_2">評価方法</h2>
-<p>driving_log_replayer/launch/obstacle_segmentation.launch.py を用いて、評価用のノードを autoware_launch の logging_simulator.launch と一緒に立ち上げる。</p>
-<h2 id="topic">評価ノードが使用する Topic とデータ型</h2>
-<ul>
-<li>subscribe</li>
+<p>The recommended annotation tool is <a href="https://www.deepen.ai/">Deepen</a>, but any tool that supports conversion to <code>t4_dataset</code> format can be used.
+Multiple annotation tools can be used as long as a conversion tool can be created.</p>
+<h2 id="evaluation-method">Evaluation method<a class="headerlink" href="#evaluation-method" title="Permanent link">#</a></h2>
+<p>The obstacle segmentation evaluation is executed by launching the <code>obstacle_segmentation.launch.py</code> file.
+Launching the file executes the following steps:</p>
+<ol>
+<li>Launch C++ evaluation node, Python evaluation node, launch <code>logging_simulator.launch</code> file, and execute <code>ros2 bag play</code> command.</li>
+<li>Autoware receives sensor data output from input rosbag and outputs <code>/perception/obstacle_segmentation/pointcloud</code> topic.</li>
+<li>The C++ evaluation node subscribes <code>/perception/obstacle_segmentation/pointcloud</code> topic and calculates the polygon of the non-detection area at the time specified in the header.</li>
+<li>The non-detection area polygon along with a pointcloud is published to <code>/driving_log_replayer/obstacle_segmentation/input</code> topic.</li>
+<li>Python evaluation node subscribes <code>/driving_log_replayer/obstacle_segmentation/input</code> and evaluates data. The result is dumped into a file.</li>
+<li>When the playback of the rosbag is finished, Autoware's launch is automatically terminated, and the evaluation is completed.</li>
+</ol>
+<h2 id="evaluation-result">Evaluation Result<a class="headerlink" href="#evaluation-result" title="Permanent link">#</a></h2>
+<p>The results are calculated for each subscription. The format and available states are described below.</p>
+<h3 id="detection-normal">Detection Normal<a class="headerlink" href="#detection-normal" title="Permanent link">#</a></h3>
+<p>If all of the following conditions are met, the evaluation is reported as normal:</p>
+<ol>
+<li>A bounding box with the UUID specified in the scenario must contain a point cloud (topic <code>/perception/obstacle_segmentation/pointcloud</code>) with at least a number of points equal to the specified number.<ul>
+<li>If multiple UUIDs are specified, the condition must be satisfied for all the specified bounding boxes.</li>
 </ul>
+</li>
+<li>The output rate of the point cloud cannot be in error state (this data is provided by Autoware's diagnostic function). The default frequency value is 1.0Hz.</li>
+</ol>
+<h3 id="detection-warning">Detection Warning<a class="headerlink" href="#detection-warning" title="Permanent link">#</a></h3>
+<p>The state is achieved when the visibility of the bounding box with the UUID specified in the scenario is none (bounding box is occluded) and cannot be evaluated.</p>
+<h3 id="detection-error">Detection Error<a class="headerlink" href="#detection-error" title="Permanent link">#</a></h3>
+<p>The detection state is <code>Error</code> when neither conditions for <code>Normal</code> nor <code>Warning</code> state cannot be met.</p>
+<h3 id="non-detection-normal">Non-Detection Normal<a class="headerlink" href="#non-detection-normal" title="Permanent link">#</a></h3>
+<p>The state is <code>Normal</code> when no point is contained in the non-detection area, which is calculated by the C++ node in step 3 of the evaluation method.</p>
+<h3 id="non-detection-error">Non-Detection Error<a class="headerlink" href="#non-detection-error" title="Permanent link">#</a></h3>
+<p>The state is <code>Error</code> when any point was found in the non-detection area.</p>
+<h2 id="topic-name-and-data-type-used-by-evaluation-node">Topic name and data type used by evaluation node<a class="headerlink" href="#topic-name-and-data-type-used-by-evaluation-node" title="Permanent link">#</a></h2>
+<p>Subscribed topics:</p>
 <table>
 <thead>
 <tr>
-<th>topic 名</th>
-<th>データ型</th>
+<th>Topic name</th>
+<th>Data type</th>
 </tr>
 </thead>
 <tbody>
@@ -990,14 +1176,12 @@
 </tr>
 </tbody>
 </table>
-<ul>
-<li>publish</li>
-</ul>
+<p>Published topics:</p>
 <table>
 <thead>
 <tr>
-<th>topic 名</th>
-<th>データ型</th>
+<th>Topic name</th>
+<th>Data type</th>
 </tr>
 </thead>
 <tbody>
@@ -1027,110 +1211,86 @@
 </tr>
 </tbody>
 </table>
-<h3 id="logging_simulatorlaunch">logging_simulator.launch に渡す引数</h3>
-<p>autoware の処理を軽くするため、評価に関係のないモジュールは launch の引数に false を渡すことで無効化する。以下を設定する。</p>
+<h2 id="arguments-passed-to-logging_simulatorlaunch">Arguments passed to logging_simulator.launch<a class="headerlink" href="#arguments-passed-to-logging_simulatorlaunch" title="Permanent link">#</a></h2>
+<p>To make Autoware processing less resource-consuming, modules that are not relevant to evaluation are disabled by passing the <code>false</code> parameter as a launch argument.
+The following parameters are set to <code>false</code> when launching the <code>obstacle_segmentation</code> evaluation scenario:</p>
 <ul>
 <li>localization: false</li>
 <li>control: false</li>
 </ul>
-<p>autoware から出力される点群(/perception/obstacle_segmentation/pointcloud)を評価する。
-検知と非検知でそれぞれの評価される。</p>
-<h3 id="_3">検知正常</h3>
-<p>シナリオで指定した UUID の bounding box 内に、指定した点数以上の点群(/perception/obstacle_segmentation/pointcloud)が入っていること。複数の UUID(bounding box)を指定した場合は指定した全ての箱に対して正常であること。
-かつ、autoware が提供する診断機能で点群の出力レートがエラーではない。デフォルトでは 1.0Hz 以下でエラー</p>
-<h3 id="_4">検知警告</h3>
-<p>シナリオで指定した UUID の bounding box に visibility が none(occlusion 状態)にあるものが含まれていて評価出来ない場合。</p>
-<h3 id="_5">検知異常</h3>
-<p>検知警告でも、検知正常でもない場合</p>
-<h3 id="_6">非検知正常</h3>
-<p>点群(/perception/obstacle_segmentation/pointcloud)がシナリオの<code>["NonDetection"]["ProposedArea"]</code>で設定した base_link 基準の polygon と lane の重なりの polygon 内に点群が 1 点もないこと。</p>
-<h3 id="_7">非検知異常</h3>
-<p>点群(/perception/obstacle_segmentation/pointcloud)がシナリオの<code>["NonDetection"]["ProposedArea"]</code>で設定した base_link 基準の polygon と lane の重なりの polygon 内に点群が出ていること。</p>
-<h3 id="_8">評価フロー</h3>
-<ol>
-<li>launch で C++の評価ノード(obstacle_segmentation_evaluator_node)と、Python の評価ノード(obstacle_segmentation_evaluator_node.py)と logging_simulator.launch、ros2 bag play を立ち上げる</li>
-<li>bag から出力されたセンサーデータを autoware が受け取って、/perception/obstacle_segmentation/pointcloud を出力する</li>
-<li>C++の評価ノードが/perception/obstacle_segmentation/pointcloud を subscribe して、header の時刻で非検知エリアの polygon を計算し、/driving_log_replayer/obstacle_segmentation/input に pointcloud とともにデータを詰めて publish する</li>
-<li>Python の評価ノードが/driving_log_replayer/obstacle_segmentation/input を subscribe して、callback で perception_eval を使って評価を実行する。</li>
-</ol>
-<h2 id="simulation">simulation</h2>
-<p>シミュレーション実行に必要な情報を述べる。</p>
-<h3 id="rosbag-topic">入力 rosbag に含まれるべき topic</h3>
-<p>t4_dataset で必要なトピックが含まれていること</p>
-<h2 id="evaluation">evaluation</h2>
-<p>評価に必要な情報を述べる。</p>
-<h3 id="_9">シナリオフォーマット</h3>
-<pre><code class="language-yaml">Evaluation:
-  UseCaseName: obstacle_segmentation
-  UseCaseFormatVersion: 0.1.0
-  Datasets:
-    - 63800729-18d2-4383-91e9-fea7bad384f4:
-        VehicleId: ps1/20210620/CAL_000015 # データセット毎にVehicleIdを指定する
-        LocalMapPath: $HOME/map/obstacle_segmentation # データセット毎にLocalMapPathを指定する
-  Conditions:
-    ObstacleDetection:
-      PassRate: 99.0 # 評価試行回数の内、どの程度(%)評価成功だったら成功とするか
-    NonDetection:
-      PassRate: 99.0 # 評価試行回数の内、どの程度(%)評価成功だったら成功とするか
-      ProposedArea: # base_linkを中心に非検知のエリアを一筆描きのpolygonで記述する。時計周りに記述する
-        polygon_2d: # xy平面でpolygonを時計回りで記述する
-          - [10.0, 1.5]
-          - [10.0, -1.5]
-          - [0.0, -1.5]
-          - [0.0, 1.5]
-        z_min: 0.0 # 3Dにするときのz下限値
-        z_max: 1.5 # 3Dにするときのz上限値
-  SensingEvaluationConfig:
-    evaluation_config_dict:
-      evaluation_task: sensing # 固定値
-      target_uuids: # detectionで対象とするバウンディングボックスのID
-        - 1b40c0876c746f96ac679a534e1037a2
-      box_scale_0m: 1.0 # バウンディングボックスを距離に応じて拡大縮小する倍率0m地点
-      box_scale_100m: 1.0 # 100m地点の倍率、0から100mまで距離に応じて線形補完で倍率が決定する
-      min_points_threshold: 1 # バウンディングボックスに最低何個の点が入っていればDetectionを成功とするかのしきい値
-</code></pre>
-<h3 id="_10">評価結果ファイルフォーマット</h3>
-<p>obstacle_segmentation では、検知(Detection)と非検知(NonDetection)の 2 つを評価している。
-1 回の点群の callback で同時に評価しているが、それぞれ別にカウントしている。
-Result は検知と非検知両方のパスしていれば true でそれ以外は false 失敗となる。</p>
-<p>以下に、フォーマットを示す。
-ただし、結果ファイルフォーマットで解説済みの共通部分については省略する。</p>
-<pre><code class="language-json">{
-  &quot;Frame&quot;: {
-    &quot;FrameName&quot;: &quot;評価に使用したt4_datasetのフレーム番号&quot;,
-    &quot;FrameSkip&quot;: &quot;objectの評価を依頼したがdatasetに75msec以内の真値がなく評価を飛ばされた回数&quot;,
-    &quot;Detection&quot;: {
-      &quot;Result&quot;: &quot;Success or Warn or Fail&quot;,
-      &quot;Info&quot;: [
-        {
-          &quot;Annotation&quot;: &quot;アノテーションされたバンディングボックスの情報、位置姿勢、ID&quot;,
-          &quot;PointCloud&quot;: &quot;評価した点群の情報、バウンディングボックス内の点の数と、base_linkからの最近傍の点の位置&quot;
-        }
-      ]
-    },
-    &quot;NonDetection&quot;: {
-      &quot;Result&quot;: &quot;Success or Fail&quot;,
-      &quot;Info&quot;: [
-        {
-          &quot;PointCloud&quot;: &quot;非検知エリアに出ている点の数と、base_linkからの距離毎の分布&quot;
-        }
-      ]
-    },
-    &quot;StopReasons&quot;: &quot;Planning moduleが出力する停止理由。参考値&quot;,
-    &quot;TopicRate&quot;: &quot;点群の出力レートが正常かどうかを示すdiagの結果&quot;
-  }
-}
-</code></pre>
+<h2 id="about-simulation">About simulation<a class="headerlink" href="#about-simulation" title="Permanent link">#</a></h2>
+<p>State the information required to run the simulation.</p>
+<h3 id="topic-to-be-included-in-the-input-rosbag">Topic to be included in the input rosbag<a class="headerlink" href="#topic-to-be-included-in-the-input-rosbag" title="Permanent link">#</a></h3>
+<p>Must contain the required topics in <code>t4_dataset</code> format.</p>
+<h2 id="about-evaluation">About Evaluation<a class="headerlink" href="#about-evaluation" title="Permanent link">#</a></h2>
+<p>State the information necessary for the evaluation.</p>
+<h3 id="scenario-format">Scenario Format<a class="headerlink" href="#scenario-format" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">Evaluation</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">UseCaseName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">obstacle_segmentation</span><span class="w"></span>
+<span class="w">  </span><span class="nt">UseCaseFormatVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.1.0</span><span class="w"></span>
+<span class="w">  </span><span class="nt">Datasets</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">sample_dataset</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">VehicleId</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span><span class="w"></span>
+<span class="w">        </span><span class="nt">LocalMapPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$HOME/autoware_map/sample-map-planning</span><span class="w"></span>
+<span class="w">  </span><span class="nt">Conditions</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">ObstacleDetection</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">PassRate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">99.0</span><span class="w"> </span><span class="c1"># How much (%) of the evaluation attempts are considered successful.</span><span class="w"></span>
+<span class="w">    </span><span class="nt">NonDetection</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">PassRate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">99.0</span><span class="w"> </span><span class="c1"># How much (%) of the evaluation attempts are considered successful.</span><span class="w"></span>
+<span class="w">      </span><span class="nt">ProposedArea</span><span class="p">:</span><span class="w"> </span><span class="c1"># Non-detection area centered on the base_link with a single stroke polygon.</span><span class="w"></span>
+<span class="w">        </span><span class="nt">polygon_2d</span><span class="p">:</span><span class="w"> </span><span class="c1"># Describe polygon in xy-plane in clockwise direction</span><span class="w"></span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">10.0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1.5</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">10.0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">-1.5</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">0.0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">-1.5</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">0.0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1.5</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="w">        </span><span class="nt">z_min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.0</span><span class="w"> </span><span class="c1"># Lower z for 3D polygon</span><span class="w"></span>
+<span class="w">        </span><span class="nt">z_max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.5</span><span class="w"> </span><span class="c1"># Upper z for 3D polygon</span><span class="w"></span>
+<span class="w">  </span><span class="nt">SensingEvaluationConfig</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">evaluation_config_dict</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">evaluation_task</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sensing</span><span class="w"> </span><span class="c1"># fixed value</span><span class="w"></span>
+<span class="w">      </span><span class="nt">target_uuids</span><span class="p">:</span><span class="w"> </span><span class="c1"># UUIDs of bounding box to be detected</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dcb2b352232fff50c4fad23718f31611</span><span class="w"></span>
+<span class="w">      </span><span class="nt">box_scale_0m</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span><span class="w"> </span><span class="c1"># Scaling factor to scale the bounding box according to distance. Value at 0m</span><span class="w"></span>
+<span class="w">      </span><span class="nt">box_scale_100m</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span><span class="w"> </span><span class="c1"># Scaling factor at 100m. Magnification is determined by linear completion according to distance from 0 to 100m</span><span class="w"></span>
+<span class="w">      </span><span class="nt">min_points_threshold</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"> </span><span class="c1"># Threshold of how many points must be in the bounding box to be successful.</span><span class="w"></span>
+</code></pre></div>
+<h3 id="evaluation-result-format">Evaluation Result Format<a class="headerlink" href="#evaluation-result-format" title="Permanent link">#</a></h3>
+<p>In <code>obstacle_segmentation</code> evaluation scenario, two types of checks, detection (Detection) and non-detection (NonDetection), are evaluated.
+Although they are evaluated simultaneously, in one callback function, they are counted separately.
+The <code>Result</code> is <code>true</code> if both detection and non-detection evaluation steps have passed. Otherwise the <code>Result</code> is <code>false</code>.</p>
+<p>An example of evaluation is described below.
+<strong>NOTE: common part of the result file format, which has already been explained, is omitted.</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;Frame&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;FrameName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Frame number of t4_dataset used for evaluation&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;FrameSkip&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Number of times that an object was requested to be evaluated but the evaluation was skipped because there was no ground truth in the dataset within 75msec&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;Detection&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;Result&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Success or Warn or Fail&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;Info&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;Annotation&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Annotated banding box information, position pose, and ID&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;PointCloud&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Information on the evaluated point cloud, number of points in the bounding box and position of the nearest point from the base_link.&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">]</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;NonDetection&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;Result&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Success or Fail&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;Info&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;PointCloud&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Number of points out in the non-detection area and distribution by distance from the base_link.&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">]</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;StopReasons&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Reasons for stopping output by the Planning module. Reference value&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;TopicRate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Result of diag indicating whether the output rate of the point cloud is normal or not.&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
 
-
-
-
-
-                
-              </article>
-            </div>
-          
-          
+              
+            </article>
+            
+          </div>
         </div>
         
           <a href="#" class="md-top md-icon" data-md-component="top" hidden>
@@ -1146,7 +1306,7 @@ Result は検知と非検知両方のパスしていれば true でそれ以外�
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../localization/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 自己位置推定の評価" rel="prev">
+        <a href="../localization/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Evaluate self-localization estimation" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1155,20 +1315,20 @@ Result は検知と非検知両方のパスしていれば true でそれ以外�
               <span class="md-footer__direction">
                 Previous
               </span>
-              自己位置推定の評価
+              Evaluate self-localization estimation
             </div>
           </div>
         </a>
       
       
         
-        <a href="../perception/" class="md-footer__link md-footer__link--next" aria-label="Next: 認識機能の評価" rel="next">
+        <a href="../perception/" class="md-footer__link md-footer__link--next" aria-label="Next: Evaluate perception" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              認識機能の評価
+              Evaluate perception
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -1202,11 +1362,10 @@ Result は検知と非検知両方のパスしていれば true でそれ以外�
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../assets/javascripts/workers/search.85cb4492.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
-    
-      <script src="../../assets/javascripts/bundle.8492ddcf.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a877e258.min.js"></script>
       
     
   </body>

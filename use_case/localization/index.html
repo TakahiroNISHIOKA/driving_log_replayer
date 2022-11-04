@@ -11,22 +11,21 @@
         <link rel="canonical" href="https://tier4.github.io/driving_log_replayer/use_case/localization/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.6">
     
     
       
-        <title>自己位置推定の評価 - Driving Log Replayer Documentation</title>
+        <title>Evaluate self-localization estimation - Driving Log Replayer Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.20d9efc8.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4a0965b7.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
         
       
       
-
     
     
     
@@ -39,11 +38,10 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
-    
     
     
   </head>
@@ -68,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#evaluate-self-localization-estimation" class="md-skip">
           Skip to content
         </a>
       
@@ -76,6 +74,12 @@
     <div data-md-component="announce">
       
     </div>
+    
+      <div data-md-component="outdated" hidden>
+        <aside class="md-banner md-banner--warning">
+          
+        </aside>
+      </div>
     
     
       
@@ -103,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              自己位置推定の評価
+              Evaluate self-localization estimation
             
           </span>
         </div>
@@ -133,6 +137,32 @@
       </form>
     
     
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="../../" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="../../ja/" hreflang="ja" class="md-select__link">
+                    日本語
+                  </a>
+                </li>
+                
+            </ul>
+          </div>
+        </div>
+      </div>
+    
     
       <label class="md-header__button md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
@@ -148,7 +178,7 @@
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
@@ -172,7 +202,7 @@
         <a href="https://github.com/tier4/driving_log_replayer" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -209,8 +239,24 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../introduction/" class="md-tabs__link">
-        Introduction
+      <a href="../../quick_start/installation/" class="md-tabs__link">
+        Quick start
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../overview/" class="md-tabs__link">
+        Overview
       </a>
     </li>
   
@@ -306,7 +352,7 @@
       <a href="https://github.com/tier4/driving_log_replayer" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -348,7 +394,9 @@
       
         
           
-            
+        
+          
+        
           
         
           
@@ -359,34 +407,26 @@
         
       
       
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="../../introduction/">Introduction</a>
-          
-            <label for="__nav_2">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
+        <label class="md-nav__link" for="__nav_2">
+          Quick start
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
-      <nav class="md-nav" aria-label="Introduction" data-md-level="1">
+      <nav class="md-nav" aria-label="Quick start" data-md-level="1">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
-          Introduction
+          Quick start
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
             
-          
-            
               
   
   
   
     <li class="md-nav__item">
-      <a href="../../introduction/overview/" class="md-nav__link">
-        パッケージ概要
+      <a href="../../quick_start/installation/" class="md-nav__link">
+        Installation
       </a>
     </li>
   
@@ -399,8 +439,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../introduction/preparation/" class="md-nav__link">
-        準備
+      <a href="../../quick_start/setup/" class="md-nav__link">
+        Setup
       </a>
     </li>
   
@@ -413,8 +453,50 @@
   
   
     <li class="md-nav__item">
-      <a href="../../introduction/run/" class="md-nav__link">
-        起動方法
+      <a href="../../quick_start/localization/" class="md-nav__link">
+        Localization Evaluation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick_start/obstacle_segmentation/" class="md-nav__link">
+        Obstacle Segmentation Evaluation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick_start/perception/" class="md-nav__link">
+        Perception Evaluation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick_start/performance_diag/" class="md-nav__link">
+        Performance Diag Evaluation
       </a>
     </li>
   
@@ -447,22 +529,58 @@
             
           
         
+          
+        
+          
+        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../scenario_format/">Scenario format</a>
+          <a href="../../overview/">Overview</a>
+          
+            <label for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
           
         </div>
       
-      <nav class="md-nav" aria-label="Scenario format" data-md-level="1">
+      <nav class="md-nav" aria-label="Overview" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
-          Scenario format
+          Overview
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/command/" class="md-nav__link">
+        Command
+      </a>
+    </li>
+  
+
             
           
         </ul>
@@ -496,12 +614,56 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
+          <a href="../../scenario_format/">Scenario format</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Scenario format" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Scenario format
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
           <a href="../../result_format/">Result format</a>
           
         </div>
       
       <nav class="md-nav" aria-label="Result format" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
+        <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Result format
         </label>
@@ -528,7 +690,7 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
       
       
@@ -552,14 +714,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../">Use case</a>
           
-            <label for="__nav_5">
+            <label for="__nav_6">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
       <nav class="md-nav" aria-label="Use case" data-md-level="1">
-        <label class="md-nav__title" for="__nav_5">
+        <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
           Use case
         </label>
@@ -583,12 +745,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          自己位置推定の評価
+          Evaluate self-localization estimation
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        自己位置推定の評価
+        Evaluate self-localization estimation
       </a>
       
         
@@ -607,79 +769,58 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    評価方法
+  <a href="#evaluation-method" class="md-nav__link">
+    Evaluation method
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#topic" class="md-nav__link">
-    評価ノードが使用する Topic とデータ型
+  <a href="#evaluation-result" class="md-nav__link">
+    Evaluation Result
   </a>
   
-    <nav class="md-nav" aria-label="評価ノードが使用する Topic とデータ型">
+    <nav class="md-nav" aria-label="Evaluation Result">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#logging_simulatorlaunch" class="md-nav__link">
-    logging_simulator.launch に渡す引数
+  <a href="#reliability-of-ndt" class="md-nav__link">
+    Reliability of NDT
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    信頼度正常
+  <a href="#convergence-of-ndt" class="md-nav__link">
+    Convergence of NDT
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    信頼度異常
+  <a href="#reliability-normal" class="md-nav__link">
+    Reliability Normal
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    収束正常
+  <a href="#reliability-error" class="md-nav__link">
+    Reliability Error
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    収束異常
+  <a href="#convergence-normal" class="md-nav__link">
+    Convergence Normal
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    評価フロー
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#simulation" class="md-nav__link">
-    simulation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rosbag-topic" class="md-nav__link">
-    入力 rosbag に含まれるべき topic
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rosbag-topic_1" class="md-nav__link">
-    入力 rosbag に含まれてはいけない topic
+  <a href="#convergence-error" class="md-nav__link">
+    Convergence Error
   </a>
   
 </li>
@@ -690,23 +831,64 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#evaluation" class="md-nav__link">
-    evaluation
+  <a href="#topic-name-and-data-type-used-by-evaluation-node" class="md-nav__link">
+    Topic name and data type used by evaluation node
   </a>
   
-    <nav class="md-nav" aria-label="evaluation">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arguments-passed-to-logging_simulatorlaunch" class="md-nav__link">
+    Arguments passed to logging_simulator.launch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#about-simulation" class="md-nav__link">
+    About simulation
+  </a>
+  
+    <nav class="md-nav" aria-label="About simulation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    シナリオフォーマット
+  <a href="#topic-to-be-included-in-the-input-rosbag" class="md-nav__link">
+    Topic to be included in the input rosbag
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    評価結果ファイルフォーマット
+  <a href="#topics-that-must-not-be-included-in-the-input-rosbag" class="md-nav__link">
+    Topics that must not be included in the input rosbag
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#about-evaluation" class="md-nav__link">
+    About Evaluation
+  </a>
+  
+    <nav class="md-nav" aria-label="About Evaluation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-format" class="md-nav__link">
+    Scenario Format
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluation-result-format" class="md-nav__link">
+    Evaluation Result Format
   </a>
   
 </li>
@@ -732,7 +914,7 @@
   
     <li class="md-nav__item">
       <a href="../obstacle_segmentation/" class="md-nav__link">
-        点群生成の評価
+        Evaluate point cloud generation
       </a>
     </li>
   
@@ -746,7 +928,7 @@
   
     <li class="md-nav__item">
       <a href="../perception/" class="md-nav__link">
-        認識機能の評価
+        Evaluate perception
       </a>
     </li>
   
@@ -760,7 +942,7 @@
   
     <li class="md-nav__item">
       <a href="../performance_diag/" class="md-nav__link">
-        診断機能の評価
+        Evaluate diagnostics
       </a>
     </li>
   
@@ -800,79 +982,58 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    評価方法
+  <a href="#evaluation-method" class="md-nav__link">
+    Evaluation method
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#topic" class="md-nav__link">
-    評価ノードが使用する Topic とデータ型
+  <a href="#evaluation-result" class="md-nav__link">
+    Evaluation Result
   </a>
   
-    <nav class="md-nav" aria-label="評価ノードが使用する Topic とデータ型">
+    <nav class="md-nav" aria-label="Evaluation Result">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#logging_simulatorlaunch" class="md-nav__link">
-    logging_simulator.launch に渡す引数
+  <a href="#reliability-of-ndt" class="md-nav__link">
+    Reliability of NDT
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    信頼度正常
+  <a href="#convergence-of-ndt" class="md-nav__link">
+    Convergence of NDT
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    信頼度異常
+  <a href="#reliability-normal" class="md-nav__link">
+    Reliability Normal
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    収束正常
+  <a href="#reliability-error" class="md-nav__link">
+    Reliability Error
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    収束異常
+  <a href="#convergence-normal" class="md-nav__link">
+    Convergence Normal
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    評価フロー
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#simulation" class="md-nav__link">
-    simulation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rosbag-topic" class="md-nav__link">
-    入力 rosbag に含まれるべき topic
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rosbag-topic_1" class="md-nav__link">
-    入力 rosbag に含まれてはいけない topic
+  <a href="#convergence-error" class="md-nav__link">
+    Convergence Error
   </a>
   
 </li>
@@ -883,23 +1044,64 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#evaluation" class="md-nav__link">
-    evaluation
+  <a href="#topic-name-and-data-type-used-by-evaluation-node" class="md-nav__link">
+    Topic name and data type used by evaluation node
   </a>
   
-    <nav class="md-nav" aria-label="evaluation">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arguments-passed-to-logging_simulatorlaunch" class="md-nav__link">
+    Arguments passed to logging_simulator.launch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#about-simulation" class="md-nav__link">
+    About simulation
+  </a>
+  
+    <nav class="md-nav" aria-label="About simulation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    シナリオフォーマット
+  <a href="#topic-to-be-included-in-the-input-rosbag" class="md-nav__link">
+    Topic to be included in the input rosbag
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    評価結果ファイルフォーマット
+  <a href="#topics-that-must-not-be-included-in-the-input-rosbag" class="md-nav__link">
+    Topics that must not be included in the input rosbag
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#about-evaluation" class="md-nav__link">
+    About Evaluation
+  </a>
+  
+    <nav class="md-nav" aria-label="About Evaluation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-format" class="md-nav__link">
+    Scenario Format
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluation-result-format" class="md-nav__link">
+    Evaluation Result Format
   </a>
   
 </li>
@@ -917,33 +1119,64 @@
               </div>
             
           
-          
-            <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
                 
-                  
-
-  <a href="https://github.com/tier4/driving_log_replayer/edit/main/docs/use_case/localization.md" title="Edit this page" class="md-content__button md-icon">
-    
+  <a href="https://github.com/tier4/driving_log_replayer/edit/main/docs/use_case/localization.en.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="_1">自己位置推定の評価</h1>
-<p>Autoware の自己位置推定(localization)が安定して動作しているかを評価する。</p>
-<p>Autoware では自己位置推定の確からしさを示す以下の指標が publish されており、これらの値がシナリオで指定した値より大きかどうかで自己位置推定が安定しているかを判断する。
-また、NDT Scan Matching が収束しているかを判定するため、NDT と EKF で計算された pose の横方向の距離誤差が一定以内に収まっているかを判定する。</p>
-<h2 id="_2">評価方法</h2>
-<p>driving_log_replayer/launch/localization.launch.py を用いて、評価用のノードを autoware_launch の logging_simulator.launch と一緒に立ち上げる。</p>
-<h2 id="topic">評価ノードが使用する Topic とデータ型</h2>
+
+<h1 id="evaluate-self-localization-estimation">Evaluate self-localization estimation<a class="headerlink" href="#evaluate-self-localization-estimation" title="Permanent link">#</a></h1>
+<p>Evaluate whether Autoware's localization is working stably.</p>
+<p>In the evaluation of localization, the reliability and convergence of NDT are evaluated.</p>
+<h2 id="evaluation-method">Evaluation method<a class="headerlink" href="#evaluation-method" title="Permanent link">#</a></h2>
+<p>The localization's evaluation is executed by launching the <code>localization.launch.py</code> file.
+Launching the file executes the following steps:</p>
+<ol>
+<li>Execute launch of evaluation node (<code>localization_evaluator_node</code>), <code>logging_simulator.launch</code> file and <code>ros2 bag play</code> command</li>
+<li>Autoware receives sensor data input from previously prepared rosbag and performs localization estimation</li>
+<li>Evaluation node subscribes to Autoware's output topics, determines whether NDT reliability and convergence meet the criteria, and dumps the results to a file</li>
+<li>When the playback of the rosbag is finished, Autoware's launch is automatically terminated, and the evaluation is completed.</li>
+</ol>
+<h2 id="evaluation-result">Evaluation Result<a class="headerlink" href="#evaluation-result" title="Permanent link">#</a></h2>
+<p>The results are calculated for each subscription. The format and available states are described below.</p>
+<h3 id="reliability-of-ndt">Reliability of NDT<a class="headerlink" href="#reliability-of-ndt" title="Permanent link">#</a></h3>
+<p>Of the following two topics, the one specified in the scenario will be used for evaluation.</p>
 <ul>
-<li>subscribe</li>
+<li><code>/localization/pose_estimator/transform_probability</code></li>
+<li><code>/localization/pose_estimator/nearest_voxel_transformation_likelihood</code></li>
 </ul>
+<h3 id="convergence-of-ndt">Convergence of NDT<a class="headerlink" href="#convergence-of-ndt" title="Permanent link">#</a></h3>
+<p>Convergence evaluation is based on the following topics:</p>
+<ul>
+<li><code>/localization/pose_estimator/pose</code></li>
+<li><code>/localization/pose_twist_fusion_filter/pose</code></li>
+</ul>
+<p>However, evaluation of convergence will be started after NDT convergence, and convergence is determined by /localization/pose_estimator/transform_probability &gt; 0 or /localization/pose_estimator/nearest_voxel_transformation_likelihood &gt; 0.</p>
+<h3 id="reliability-normal">Reliability Normal<a class="headerlink" href="#reliability-normal" title="Permanent link">#</a></h3>
+<p>If the data in <code>/localization/pose_estimator/transform_probability</code> or <code>/localization/pose_estimator/nearest_voxel_transformation_likelihood</code> is greater than or equal the <code>AllowableLikelihood</code> described in the scenario.</p>
+<h3 id="reliability-error">Reliability Error<a class="headerlink" href="#reliability-error" title="Permanent link">#</a></h3>
+<p>If the data in <code>/localization/pose_estimator/transform_probability</code> or <code>/localization/pose_estimator/nearest_voxel_transformation_likelihood</code> is less than the <code>AllowableLikelihood</code> described in the scenario.</p>
+<h3 id="convergence-normal">Convergence Normal<a class="headerlink" href="#convergence-normal" title="Permanent link">#</a></h3>
+<p>If all of the following conditions are met, the convergence is reported as Normal:</p>
+<ol>
+<li>The lateral distance (calculated from <code>/localization/pose_estimator/pose</code> and <code>/localization/pose_twist_fusion_filter/pose</code> topics output) is less than or equal to <code>AllowableDistance</code> described in the scenario</li>
+<li>Execution time published to <code>/localization/pose_estimator/exe_time_ms</code> is less than or equal to <code>AllowableExeTimeMs</code> described in the scenario</li>
+<li>Number of iterations published to <code>/localization/pose_estimator/iteration_num</code> is less than or equal to <code>AllowableIterationNum</code> described in the scenario</li>
+</ol>
+<p>The lateral distance calculated in the step 1 is published as <code>/driving_log_replayer/localization/lateral_distance</code>.</p>
+<h3 id="convergence-error">Convergence Error<a class="headerlink" href="#convergence-error" title="Permanent link">#</a></h3>
+<p>The convergence evaluation output is marked as <code>Error</code> when conditions for <code>Convergence Normal</code> are not met.</p>
+<h2 id="topic-name-and-data-type-used-by-evaluation-node">Topic name and data type used by evaluation node<a class="headerlink" href="#topic-name-and-data-type-used-by-evaluation-node" title="Permanent link">#</a></h2>
+<p>Subscribed topics:</p>
 <table>
 <thead>
 <tr>
-<th>topic 名</th>
-<th>データ型</th>
+<th>Topic name</th>
+<th>Data type</th>
 </tr>
 </thead>
 <tbody>
@@ -985,14 +1218,12 @@
 </tr>
 </tbody>
 </table>
-<ul>
-<li>publish</li>
-</ul>
+<p>Published topics:</p>
 <table>
 <thead>
 <tr>
-<th>topic 名</th>
-<th>データ型</th>
+<th>Topic name</th>
+<th>Data type</th>
 </tr>
 </thead>
 <tbody>
@@ -1006,48 +1237,18 @@
 </tr>
 </tbody>
 </table>
-<h3 id="logging_simulatorlaunch">logging_simulator.launch に渡す引数</h3>
-<p>autoware の処理を軽くするため、評価に関係のないモジュールは launch の引数に false を渡すことで無効化する。以下を設定している。</p>
+<h2 id="arguments-passed-to-logging_simulatorlaunch">Arguments passed to logging_simulator.launch<a class="headerlink" href="#arguments-passed-to-logging_simulatorlaunch" title="Permanent link">#</a></h2>
+<p>To make Autoware processing less resource-consuming, modules that are not relevant to evaluation are disabled by passing the <code>false</code> parameter as a launch argument.
+The following parameters are set to <code>false</code> when launching the <code>localization</code> evaluation scenario:</p>
 <ul>
 <li>planning: false</li>
 <li>control: false</li>
 </ul>
-<p>NDT の信頼度を以下の 2 つの topic のうち、シナリオで設定した方式で評価する。</p>
-<ul>
-<li>/localization/pose_estimator/transform_probability</li>
-<li>/localization/pose_estimator/nearest_voxel_transformation_likelihood</li>
-</ul>
-<p>NDT の収束性を以下から評価する</p>
-<ul>
-<li>/localization/pose_estimator/pose</li>
-</ul>
-<p>上記のトピックを処理して、以下のいずれかとして評価される。</p>
-<p>ただし評価開始は、/localization/pose_estimator/transform_probability &gt; 0 もしくは /localization/pose_estimator/nearest_voxel_transformation_likelihood &gt; 0 になった時点からとする。</p>
-<h3 id="_3">信頼度正常</h3>
-<p>/localization/pose_estimator/transform_probability、または/localization/pose_estimator/nearest_voxel_transformation_likelihood の data がシナリオに記述した AllowableLikelihood 以上の場合</p>
-<h3 id="_4">信頼度異常</h3>
-<p>/localization/pose_estimator/transform_probability、または/localization/pose_estimator/nearest_voxel_transformation_likelihood の data がシナリオに記述した AllowableLikelihood 未満の場合</p>
-<h3 id="_5">収束正常</h3>
-<p>以下の 3 つの条件を全て満たす場合</p>
-<ul>
-<li>/localization/pose_estimator/pose と /localization/pose_twist_fusion_filter/pose から横方向の距離を計算して、シナリオに記述した AllowableDistance 以下</li>
-<li>/localization/pose_estimator/exe_time_ms が、シナリオに記述した AllowableExeTimeMs 以下</li>
-<li>/localization/pose_estimator/iteration_num が、シナリオに記述した AllowableIterationNum 以下</li>
-</ul>
-<h3 id="_6">収束異常</h3>
-<p>収束正常の条件を満たさない場合</p>
-<h3 id="_7">評価フロー</h3>
-<ol>
-<li>launch で評価ノード(localization_evaluator_node)と logging_simulator.launch、ros2 bag play を立ち上げる</li>
-<li>bag から出力されたセンサーデータを autoware が受け取って、自己位置推定を行う</li>
-<li>評価ノードが/localization/pose_estimator/transform_probability、または/localization/pose_estimator/nearest_voxel_transformation_likelihood、及び/localization/pose_estimator/pose を subscribe して、コールバックで評価を行う</li>
-</ol>
-<h3 id="simulation">simulation</h3>
-<p>シミュレーション実行に必要な情報を述べる。</p>
-<h3 id="rosbag-topic">入力 rosbag に含まれるべき topic</h3>
-<p>車両の ECU の CAN と、使用している sensor の topic が必要
-以下は例であり、違うセンサーを使っている場合は適宜読み替える。</p>
-<p>LiDAR が複数ついている場合は、搭載されているすべての LiDAR の packets を含める</p>
+<h2 id="about-simulation">About simulation<a class="headerlink" href="#about-simulation" title="Permanent link">#</a></h2>
+<p>State the information required to run the simulation.</p>
+<h3 id="topic-to-be-included-in-the-input-rosbag">Topic to be included in the input rosbag<a class="headerlink" href="#topic-to-be-included-in-the-input-rosbag" title="Permanent link">#</a></h3>
+<p>The vehicle's ECU CAN and sensors data topics are required for the evaluation to be run correctly.
+The following example shows the topic list available in evaluation input rosbag when multiple LiDARs are used in a real-world vehicle configuration.</p>
 <ul>
 <li>/sensing/gnss/ublox/fix_velocity</li>
 <li>/sensing/gnss/ublox/nav_sat_fix</li>
@@ -1056,84 +1257,79 @@
 <li>/sensing/lidar/*/velodyne_packets</li>
 <li>/gsm8/from_can_bus</li>
 </ul>
-<h3 id="rosbag-topic_1">入力 rosbag に含まれてはいけない topic</h3>
+<h3 id="topics-that-must-not-be-included-in-the-input-rosbag">Topics that must not be included in the input rosbag<a class="headerlink" href="#topics-that-must-not-be-included-in-the-input-rosbag" title="Permanent link">#</a></h3>
 <ul>
 <li>/clock</li>
 </ul>
-<h2 id="evaluation">evaluation</h2>
-<p>評価に必要な情報を述べる。</p>
-<h3 id="_8">シナリオフォーマット</h3>
-<pre><code class="language-yaml">Evaluation:
-  UseCaseName: localization
-  UseCaseFormatVersion: 1.2.0
-  Conditions:
-    Convergence: # 収束性評価
-      AllowableDistance: 0.2 # 直線距離でこの距離以内だったら収束とみなす
-      AllowableExeTimeMs: 100.0 # NDTの計算時間がこの値以下なら成功とみなす
-      AllowableIterationNum: 30 # NDTの計算回数がこの値以下なら成功とみなす
-      PassRate: 95.0 # 収束性の評価試行回数の内、どの程度(%)評価成功だったら成功とするか
-    Reliability: # 信頼度評価
-      Method: NVTL # NVTL or TPのどちらで評価を行うか
-      AllowableLikelihood: 3.0 # この値以上なら信頼度は正常とみなす
-      NGCount: 10 # 信頼度異常が連続でこの回数続いたら信頼度評価失敗とみなす
-  InitialPose:
-    position:
-      x: 16876.271484375
-      y: 36087.9453125
-      z: 0.0
-    orientation:
-      x: 0.0
-      y: 0.0
-      z: 0.23490284404117467
-      w: 0.9720188546840887
-</code></pre>
-<h3 id="_9">評価結果ファイルフォーマット</h3>
-<p>localization では、収束性と信頼度の 2 つを評価しているので、行毎に収束性または信頼度のどちらかの結果が入っている。
-Result は収束性と信頼度両方のパスしていれば true でそれ以外は false 失敗となる。</p>
-<p>以下に、それぞれの評価の例を記述する。
-ただし、結果ファイルフォーマットで解説済みの共通部分については省略する。</p>
-<p>収束性の結果(Frame の中に Convergence 項目がある場合)</p>
-<pre><code class="language-json">{
-  &quot;Frame&quot;: {
-    &quot;Convergence&quot;: {
-      &quot;Result&quot;: &quot;Success or Fail&quot;,
-      &quot;Info&quot;: [
-        {
-          &quot;LateralDistance&quot;: &quot;評価に使用したndtとekfの横方向の距離差&quot;,
-          &quot;HorizontalDistance&quot;: &quot;ndtとekfの水平距離。参考値&quot;,
-          &quot;ExeTimeMs&quot;: &quot;評価に使用したndtの計算にかかった時間&quot;,
-          &quot;IterationNum&quot;: &quot;評価に使用したndtの再計算回数&quot;
-        }
-      ]
-    }
-  }
-}
-</code></pre>
-<p>信頼度の結果(Frame に Reliability の項目がある場合)</p>
-<pre><code class="language-json">{
-  &quot;Frame&quot;: {
-    &quot;Reliability&quot;: {
-      &quot;Result&quot;: &quot;Success or Fail&quot;,
-      &quot;Info&quot;: [
-        {
-          &quot;Value&quot;: &quot;評価に使用したNVTL or TPの値&quot;,
-          &quot;Reference&quot;: &quot;評価に使用しなかった尤度。参考値。ValueがNVTLならTPが入る&quot;
-        }
-      ]
-    }
-  }
-}
-</code></pre>
+<h2 id="about-evaluation">About Evaluation<a class="headerlink" href="#about-evaluation" title="Permanent link">#</a></h2>
+<p>State the information necessary for the evaluation.</p>
+<h3 id="scenario-format">Scenario Format<a class="headerlink" href="#scenario-format" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">Evaluation</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">UseCaseName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">localization</span><span class="w"></span>
+<span class="w">  </span><span class="nt">UseCaseFormatVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.2.0</span><span class="w"></span>
+<span class="w">  </span><span class="nt">Conditions</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">Convergence</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">AllowableDistance</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.2</span><span class="w"> </span><span class="c1"># Lateral distance to be considered convergence</span><span class="w"></span>
+<span class="w">      </span><span class="nt">AllowableExeTimeMs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100.0</span><span class="w"> </span><span class="c1"># If the NDT computation time is less than or equal to this value, it is considered successful.</span><span class="w"></span>
+<span class="w">      </span><span class="nt">AllowableIterationNum</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span><span class="w"> </span><span class="c1"># If the number of NDT calculations is less than or equal to this value, it is considered a success.</span><span class="w"></span>
+<span class="w">      </span><span class="nt">PassRate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">95.0</span><span class="w"> </span><span class="c1"># How much (%) of the evaluation attempts are considered successful.</span><span class="w"></span>
+<span class="w">    </span><span class="nt">Reliability</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">Method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NVTL</span><span class="w"> </span><span class="c1"># NVTL or TP which method to use for evaluation</span><span class="w"></span>
+<span class="w">      </span><span class="nt">AllowableLikelihood</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2.3</span><span class="w"> </span><span class="c1"># If above this value, the localization reliability value is considered normal.</span><span class="w"></span>
+<span class="w">      </span><span class="nt">NGCount</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span><span class="w"> </span><span class="c1"># If the reliability value is lower than the threshold value for more than this number in the sequence. the evaluation is considered to have failed.</span><span class="w"></span>
+<span class="w">  </span><span class="nt">InitialPose</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">position</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3836.5478515625</span><span class="w"></span>
+<span class="w">      </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">73729.96875</span><span class="w"></span>
+<span class="w">      </span><span class="nt">z</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.0</span><span class="w"></span>
+<span class="w">    </span><span class="nt">orientation</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.0</span><span class="w"></span>
+<span class="w">      </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.0</span><span class="w"></span>
+<span class="w">      </span><span class="nt">z</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-0.9689404241590215</span><span class="w"></span>
+<span class="w">      </span><span class="nt">w</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.2472942668776119</span><span class="w"></span>
+</code></pre></div>
+<h3 id="evaluation-result-format">Evaluation Result Format<a class="headerlink" href="#evaluation-result-format" title="Permanent link">#</a></h3>
+<p>Since localization evaluates both convergence and confidence of the localization, each line contains the result of either convergence or confidence.
+The result is <code>true</code> if both convergence and confidence are evaluated correctly. Otherwise, the output is set to <code>false</code>.</p>
+<p>Examples of each evaluation are described below.
+<strong>NOTE: common part of the result file format, which has already been explained, is omitted.</strong></p>
+<p>Convergence Result example:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;Frame&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;Convergence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;Result&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Success or Fail&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;Info&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;LateralDistance&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Lateral distance between ndt and ekf pose&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;HorizontalDistance&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Horizontal distance between ndt and ekf. Reference value&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;ExeTimeMs&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Time taken to calculate ndt&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;IterationNum&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Number of recalculations of ndt&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">]</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Reliability Result example:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;Frame&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;Reliability&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;Result&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Success or Fail&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;Info&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;Value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Value of NVTL or TP&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;Reference&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Likelihood not used in the evaluation. Reference value; if Value is NVTL, TP is entered.&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">]</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
 
-
-
-
-
-                
-              </article>
-            </div>
-          
-          
+              
+            </article>
+            
+          </div>
         </div>
         
           <a href="#" class="md-top md-icon" data-md-component="top" hidden>
@@ -1149,7 +1345,7 @@ Result は収束性と信頼度両方のパスしていれば true でそれ以�
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: 評価ユースケース" rel="prev">
+        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Evaluation Use Cases" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1158,20 +1354,20 @@ Result は収束性と信頼度両方のパスしていれば true でそれ以�
               <span class="md-footer__direction">
                 Previous
               </span>
-              評価ユースケース
+              Evaluation Use Cases
             </div>
           </div>
         </a>
       
       
         
-        <a href="../obstacle_segmentation/" class="md-footer__link md-footer__link--next" aria-label="Next: 点群生成の評価" rel="next">
+        <a href="../obstacle_segmentation/" class="md-footer__link md-footer__link--next" aria-label="Next: Evaluate point cloud generation" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              点群生成の評価
+              Evaluate point cloud generation
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -1205,11 +1401,10 @@ Result は収束性と信頼度両方のパスしていれば true でそれ以�
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../assets/javascripts/workers/search.85cb4492.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
-    
-      <script src="../../assets/javascripts/bundle.8492ddcf.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a877e258.min.js"></script>
       
     
   </body>
