@@ -400,7 +400,7 @@
   
     <li class="md-nav__item">
       <a href="../../quick_start/installation/" class="md-nav__link">
-        Installation
+        インストール
       </a>
     </li>
   
@@ -414,7 +414,7 @@
   
     <li class="md-nav__item">
       <a href="../../quick_start/setup/" class="md-nav__link">
-        Setup
+        設定
       </a>
     </li>
   
@@ -428,7 +428,7 @@
   
     <li class="md-nav__item">
       <a href="../../quick_start/localization/" class="md-nav__link">
-        Localization Evaluation
+        自己位置推定機能の評価
       </a>
     </li>
   
@@ -442,7 +442,7 @@
   
     <li class="md-nav__item">
       <a href="../../quick_start/obstacle_segmentation/" class="md-nav__link">
-        Obstacle Segmentation Evaluation
+        Obstacle Segmentation の評価
       </a>
     </li>
   
@@ -456,7 +456,7 @@
   
     <li class="md-nav__item">
       <a href="../../quick_start/perception/" class="md-nav__link">
-        Perception Evaluation
+        認識機能の評価
       </a>
     </li>
   
@@ -470,7 +470,7 @@
   
     <li class="md-nav__item">
       <a href="../../quick_start/performance_diag/" class="md-nav__link">
-        Performance Diag Evaluation
+        診断機能の評価
       </a>
     </li>
   
@@ -1133,10 +1133,10 @@
 <p>Autoware の認識機能(perception)の認識結果から mAP(mean Average Precision)などの指標を計算して性能を評価する。</p>
 <p>perception モジュールを起動して出力される perception の topic を評価用ライブラリに渡して評価を行う。</p>
 <h2 id="_2">評価方法<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
-<p>perception.launch.py を使用して評価する。
+<p><code>perception.launch.py</code> を使用して評価する。
 launch を立ち上げると以下のことが実行され、評価される。</p>
 <ol>
-<li>launch で評価ノード(perception_evaluator_node)と logging_simulator.launch、ros2 bag play を立ち上げる</li>
+<li>launch で評価ノード(<code>perception_evaluator_node</code>)と <code>logging_simulator.launch</code>、<code>ros2 bag play</code>コマンドを立ち上げる</li>
 <li>bag から出力されたセンサーデータを autoware が受け取って、点群データを出力し、perception モジュールが認識を行う</li>
 <li>評価ノードが/perception/object_recognition/{detection, tracking}/objects を subscribe して、コールバックで perception_eval の関数を用いて評価し結果をファイルに記録する</li>
 <li>bag の再生が終了すると自動で launch が終了して評価が終了する</li>
@@ -1148,13 +1148,15 @@ launch を立ち上げると以下のことが実行され、評価される。<
 <h2 id="_4">評価結果<a class="headerlink" href="#_4" title="Permanent link">#</a></h2>
 <p>topic の subscribe 1 回につき、以下に記述する判定結果が出力される。</p>
 <h3 id="_5">正常<a class="headerlink" href="#_5" title="Permanent link">#</a></h3>
-<p>perception_eval の関数を使って評価失敗のオブジェクトが 0 個の場合、frame_result.pass_fail_result.get_fail_object_num() == 0</p>
+<p>perception_eval の評価関数を実行して以下の条件を満たすとき</p>
+<ol>
+<li>frame_result.pass_fail_result に object が最低 1 つ入っている (<code>tp_objects is not None and fp_objects is not None and fn_objects is not None</code>)</li>
+<li>評価失敗のオブジェクトが 0 個 (<code>frame_result.pass_fail_result.get_fail_object_num() == 0</code>)</li>
+</ol>
 <h3 id="_6">異常<a class="headerlink" href="#_6" title="Permanent link">#</a></h3>
-<p>perception_eval の関数を使って評価失敗のオブジェクトが存在する場合、frame_result.pass_fail_result.get_fail_object_num() &gt; 0</p>
+<p>正常の条件を満たさない場合</p>
 <h2 id="topic">評価ノードが使用する Topic 名とデータ型<a class="headerlink" href="#topic" title="Permanent link">#</a></h2>
-<ul>
-<li>subscribe</li>
-</ul>
+<p>Subscribed topics:</p>
 <table>
 <thead>
 <tr>
@@ -1173,9 +1175,7 @@ launch を立ち上げると以下のことが実行され、評価される。<
 </tr>
 </tbody>
 </table>
-<ul>
-<li>publish</li>
-</ul>
+<p>Published topics:</p>
 <table>
 <thead>
 <tr>
@@ -1195,21 +1195,21 @@ launch を立ち上げると以下のことが実行され、評価される。<
 </tbody>
 </table>
 <h2 id="logging_simulatorlaunch">logging_simulator.launch に渡す引数<a class="headerlink" href="#logging_simulatorlaunch" title="Permanent link">#</a></h2>
-<p>autoware の処理を軽くするため、評価に関係のないモジュールは launch の引数に false を渡すことで無効化する。以下を設定している。
-アノーテション時とシミュレーション時で自己位置を合わせたいので bag に入っている tf を使い回す。そのため localization は無効である。</p>
+<p>autoware の処理を軽くするため、評価に関係のないモジュールは launch の引数に false を渡すことで無効化する。以下を設定している。</p>
 <ul>
 <li>localization: false</li>
 <li>planning: false</li>
 <li>control: false</li>
 <li>sensing: false / true (デフォルト false、シナリオの <code>LaunchSensing</code> キーで t4_dataset 毎に指定する)</li>
 </ul>
+<p><strong>注:アノーテション時とシミュレーション時で自己位置を合わせたいので bag に入っている tf を使い回す。そのため localization は無効である。</strong></p>
 <h2 id="_7">依存ライブラリ<a class="headerlink" href="#_7" title="Permanent link">#</a></h2>
-<p><a href="https://github.com/tier4/autoware_perception_evaluation">perception_eval</a></p>
+<p>認識機能の評価は<a href="https://github.com/tier4/autoware_perception_evaluation">perception_eval</a>に依存している。</p>
 <h3 id="driving_log_replayer">依存ライブラリとの driving_log_replayer の役割分担<a class="headerlink" href="#driving_log_replayer" title="Permanent link">#</a></h3>
-<p>driving_log_replayer が ROS との接続部分を担当し、perception_eval がデータセットを扱う部分がを担当するという分担になっている。
+<p>driving_log_replayer が ROS との接続部分を担当し、perception_eval がデータセットを使って実際に評価する部分を担当するという分担になっている。
 perception_eval は ROS 非依存のライブラリなので、ROS のオブジェクトを受け取ることができない。
-また、timestamp が ROS ではナノ秒、データセットは ミリ秒が使用されている。
-t4_dataset は nuScenes をベースとしており、nuScenes がミリ秒を採用しているので t4_dataset もミリ秒となっている。</p>
+また、timestamp が ROS ではナノ秒、t4_dataset は <code>nuScenes</code> をベースしているためミリ秒が採用されている。
+このため、ライブラリ使用前に適切な変換が必要となる。</p>
 <p>driving_log_replayer は、autoware の perception モジュールから出力された topic を subscribe し、perception_eval が期待するデータ形式に変換して渡す。
 また、perception_eval から返ってくる評価結果の ROS の topic で publish し可視化する部分も担当する。</p>
 <p>perception_eval は、driving_log_replayer から渡された検知結果と GroundTruth を比較して指標を計算し、結果を出力する部分を担当する。</p>
@@ -1266,7 +1266,7 @@ t4_dataset は nuScenes をベースとしており、nuScenes がミリ秒を�
 <p>perception では、シナリオに指定した条件で perception_eval が評価した結果を各 frame 毎に出力する。
 全てのデータを流し終わったあとに、最終的なメトリクスを計算しているため、最終行だけ、他の行と形式が異なる。</p>
 <p>以下に、各フレームのフォーマットとメトリクスのフォーマットを示す。
-ただし、結果ファイルフォーマットで解説済みの共通部分については省略する。</p>
+<strong>注:結果ファイルフォーマットで解説済みの共通部分については省略する。</strong></p>
 <p>各フレームのフォーマット</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="nt">&quot;Frame&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>

@@ -400,7 +400,7 @@
   
     <li class="md-nav__item">
       <a href="../../quick_start/installation/" class="md-nav__link">
-        Installation
+        インストール
       </a>
     </li>
   
@@ -414,7 +414,7 @@
   
     <li class="md-nav__item">
       <a href="../../quick_start/setup/" class="md-nav__link">
-        Setup
+        設定
       </a>
     </li>
   
@@ -428,7 +428,7 @@
   
     <li class="md-nav__item">
       <a href="../../quick_start/localization/" class="md-nav__link">
-        Localization Evaluation
+        自己位置推定機能の評価
       </a>
     </li>
   
@@ -442,7 +442,7 @@
   
     <li class="md-nav__item">
       <a href="../../quick_start/obstacle_segmentation/" class="md-nav__link">
-        Obstacle Segmentation Evaluation
+        Obstacle Segmentation の評価
       </a>
     </li>
   
@@ -456,7 +456,7 @@
   
     <li class="md-nav__item">
       <a href="../../quick_start/perception/" class="md-nav__link">
-        Perception Evaluation
+        認識機能の評価
       </a>
     </li>
   
@@ -470,7 +470,7 @@
   
     <li class="md-nav__item">
       <a href="../../quick_start/performance_diag/" class="md-nav__link">
-        Performance Diag Evaluation
+        診断機能の評価
       </a>
     </li>
   
@@ -1125,10 +1125,10 @@
 <li>blockage: LiDAR に葉っぱなどが付着して計測の妨げをしていないかを判定する機能</li>
 </ul>
 <h2 id="_2">評価方法<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
-<p>performance_diag.launch.py を使用して評価する。
+<p><code>performance_diag.launch.py</code> を使用して評価する。
 launch を立ち上げると以下のことが実行され、評価される。</p>
 <ol>
-<li>launch で評価ノード(performance_diag_evaluator_node)と logging_simulator.launch、ros2 bag play を立ち上げる</li>
+<li>launch で評価ノード(<code>performance_diag_evaluator_node</code>)と <code>logging_simulator.launch</code>、<code>ros2 bag play</code>コマンドを立ち上げる</li>
 <li>bag から出力されたセンサーデータを autoware が受け取って、/diagnostics_agg を出力する</li>
 <li>評価ノードが/diagnostics_agg を subscribe して、コールバックで評価を行い結果をファイルに記録する。</li>
 <li>bag の再生が終了すると自動で launch が終了して評価が終了する</li>
@@ -1136,33 +1136,29 @@ launch を立ち上げると以下のことが実行され、評価される。<
 <h3 id="visibility">visibility 評価<a class="headerlink" href="#visibility" title="Permanent link">#</a></h3>
 <p>visibility の評価では、雨天時や人工的に雨を降らせられる施設で取得したデータを用いて visibility の ERROR が一定数以上出力されることを確認する。
 また、晴天時のデータを利用して、ERROR が一度も出ないことを確認する。</p>
+<p><code>/diagnostics_agg</code>の<code>status.name</code>が<code>/autoware/sensing/lidar/performance_monitoring/visibility/\*</code>に該当するものを判定に利用する。</p>
 <h3 id="blockage">blockage 評価<a class="headerlink" href="#blockage" title="Permanent link">#</a></h3>
-<p>blockage の評価では、LiDAR をビニール袋などでわざと覆った状態でデータを取得し blockage の ERROR が一定数以上出力されることを確認する。
+<p>blockage の評価では、LiDAR を意図的にレーザー光を通さない素材(箱など)で覆った状態でデータを取得し blockage の ERROR が一定数以上出力されることを確認する。
 また、覆ってない LiDAR については ERROR が一度も出ないことを確認する。</p>
+<p><code>/diagnostics_agg</code>の<code>status.name</code>が<code>/autoware/sensing/lidar/performance_monitoring/blockage/*</code>に該当するものを判定に利用する。</p>
 <h2 id="_3">評価結果<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
 <p>LiDAR の診断結果の subscribe 1 回につき、以下に記述する判定結果が出力される。</p>
-<ul>
-<li>visibility: /autoware/sensing/lidar/performance_monitoring/visibility/.*</li>
-<li>blockage: /autoware/sensing/lidar/performance_monitoring/blockage/.*</li>
-</ul>
 <p>評価したい内容によって ERROR が出る場合を成功とするか失敗とするかが分かれるので、シナリオにタイプを記述することで変更できるようになっている。</p>
 <ul>
-<li>シナリオ種類が TP の場合は Diag が一定数以上 ERROR になれば成功</li>
-<li>シナリオ種類が FP の場合は Diag が一度も ERROR にならなければ成功</li>
+<li>シナリオ種類が TP の場合は Diag が ERROR になれば成功</li>
+<li>シナリオ種類が FP の場合は Diag が ERROR にならなければ成功</li>
 <li>シナリオ種類が null の場合はテストを省略する</li>
 </ul>
 <h3 id="tp">TP 正常<a class="headerlink" href="#tp" title="Permanent link">#</a></h3>
-<p>シナリオ種類が TP の場合で、診断情報(/diagnostics_agg)に含まれる visibility または blockage の level が ERROR(=2)の場合</p>
+<p>シナリオ種類が TP の場合で、診断情報の level が ERROR(=2)の場合</p>
 <h3 id="tp_1">TP 異常<a class="headerlink" href="#tp_1" title="Permanent link">#</a></h3>
-<p>シナリオ種類が TP の場合で、診断情報(/diagnostics_agg)に含まれる visibility または blockage の level が ERROR でない(!=2)の場合</p>
+<p>シナリオ種類が TP の場合で、診断情報の level が ERROR でない(!=2)の場合</p>
 <h3 id="fp">FP 正常<a class="headerlink" href="#fp" title="Permanent link">#</a></h3>
-<p>シナリオ種類が FP の場合で、診断情報(/diagnostics_agg)に含まれる visibility または blockage の level が ERROR でない(!=2)の場合</p>
+<p>シナリオ種類が FP の場合で、診断情報の level が ERROR でない(!=2)の場合</p>
 <h3 id="fp_1">FP 異常<a class="headerlink" href="#fp_1" title="Permanent link">#</a></h3>
-<p>シナリオ種類が FP の場合で、診断情報(/diagnostics_agg)に含まれる visibility または blockage の level が ERROR(=2)の場合</p>
+<p>シナリオ種類が FP の場合で、診断情報の level が ERROR(=2)の場合</p>
 <h2 id="topic">評価ノードが使用する Topic 名とデータ型<a class="headerlink" href="#topic" title="Permanent link">#</a></h2>
-<ul>
-<li>subscribe</li>
-</ul>
+<p>Subscribed topics:</p>
 <table>
 <thead>
 <tr>
@@ -1185,9 +1181,7 @@ launch を立ち上げると以下のことが実行され、評価される。<
 </tr>
 </tbody>
 </table>
-<ul>
-<li>publish</li>
-</ul>
+<p>Published topics:</p>
 <table>
 <thead>
 <tr>
@@ -1245,6 +1239,7 @@ launch を立ち上げると以下のことが実行され、評価される。<
 <li>/gsm8/from_can_bus</li>
 <li>/tf</li>
 </ul>
+<p><strong>注:localization が false(デフォルトで false)の場合は/tf が必要。</strong></p>
 <h3 id="rosbag-topic_1">入力 rosbag に含まれてはいけない topic<a class="headerlink" href="#rosbag-topic_1" title="Permanent link">#</a></h3>
 <ul>
 <li>/clock</li>
@@ -1300,7 +1295,7 @@ launch を立ち上げると以下のことが実行され、評価される。<
 <p>performance_diag では、visibility と blockage の 2 つを評価している。
 Result は visibility と blockage の両方をパスしていれば true でそれ以外は false 失敗となる。</p>
 <p>以下に、フォーマットを示す。
-ただし、結果ファイルフォーマットで解説済みの共通部分については省略する。</p>
+<strong>注:結果ファイルフォーマットで解説済みの共通部分については省略する。</strong></p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="nt">&quot;Frame&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;Visibility&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>

@@ -400,7 +400,7 @@
   
     <li class="md-nav__item">
       <a href="../../quick_start/installation/" class="md-nav__link">
-        Installation
+        インストール
       </a>
     </li>
   
@@ -414,7 +414,7 @@
   
     <li class="md-nav__item">
       <a href="../../quick_start/setup/" class="md-nav__link">
-        Setup
+        設定
       </a>
     </li>
   
@@ -428,7 +428,7 @@
   
     <li class="md-nav__item">
       <a href="../../quick_start/localization/" class="md-nav__link">
-        Localization Evaluation
+        自己位置推定機能の評価
       </a>
     </li>
   
@@ -442,7 +442,7 @@
   
     <li class="md-nav__item">
       <a href="../../quick_start/obstacle_segmentation/" class="md-nav__link">
-        Obstacle Segmentation Evaluation
+        Obstacle Segmentation の評価
       </a>
     </li>
   
@@ -456,7 +456,7 @@
   
     <li class="md-nav__item">
       <a href="../../quick_start/perception/" class="md-nav__link">
-        Perception Evaluation
+        認識機能の評価
       </a>
     </li>
   
@@ -470,7 +470,7 @@
   
     <li class="md-nav__item">
       <a href="../../quick_start/performance_diag/" class="md-nav__link">
-        Performance Diag Evaluation
+        診断機能の評価
       </a>
     </li>
   
@@ -953,7 +953,7 @@ nano <span class="nv">$HOME</span>/.driving_log_replayer.config.toml
 <span class="c1"># cliで作成</span>
 driving_log_replayer configure register -d <span class="si">${</span><span class="nv">data_directory</span><span class="si">}</span> -o <span class="si">${</span><span class="nv">output_directory</span><span class="si">}</span> -a <span class="si">${</span><span class="nv">autoware_path</span><span class="si">}</span> <span class="o">[</span>-p <span class="si">${</span><span class="nv">profile</span><span class="si">}</span><span class="o">]</span>
 </code></pre></div>
-<p>profile は最低 1 つ必要で、1 つは default という名前である必要がある。</p>
+<p>profile は最低 1 つ必要で、1 つは <code>default</code> という名前である必要がある。</p>
 <p>以降で説明するコマンドで-p ${profile}で profile 名を指定すると、プロファイルに指定した設定が読み込まれる。
 複数の autoware を切り替えて利用することが出来、プロファイルを何も指定しない場合は default が使用される。</p>
 <div class="highlight"><pre><span></span><code><span class="k">[profile_name]</span><span class="w"></span>
@@ -986,7 +986,7 @@ driving_log_replayer configure register -d <span class="si">${</span><span class
 <h2 id="_2">フォルダ構成、ファイル命名規則<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
 <p>driving_log_replayer が期待するフォルダ構成、ファイル命名規則について解説する。</p>
 <p>driving_log_replayer では、フォルダ構成、ファイル名などを固定にすることで、シナリオに記述するパスや、コマンドに渡す引数を少なくしている。
-また、data_directory に複数のフォルダを置くことで、複数のテストを連続で実行できるようになっている。</p>
+また、<code>data_directory</code> に複数のフォルダを置くことで、複数のテストを連続で実行できるようになっている。</p>
 <h3 id="_3">データフォルダ<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
 <p>シミュレーションで使用するリソースを保存しておくフォルダ。</p>
 <p>テストケース毎に、シナリオと、bag、dataset を配置する。</p>

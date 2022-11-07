@@ -400,7 +400,7 @@
   
     <li class="md-nav__item">
       <a href="../../quick_start/installation/" class="md-nav__link">
-        Installation
+        インストール
       </a>
     </li>
   
@@ -414,7 +414,7 @@
   
     <li class="md-nav__item">
       <a href="../../quick_start/setup/" class="md-nav__link">
-        Setup
+        設定
       </a>
     </li>
   
@@ -428,7 +428,7 @@
   
     <li class="md-nav__item">
       <a href="../../quick_start/localization/" class="md-nav__link">
-        Localization Evaluation
+        自己位置推定機能の評価
       </a>
     </li>
   
@@ -442,7 +442,7 @@
   
     <li class="md-nav__item">
       <a href="../../quick_start/obstacle_segmentation/" class="md-nav__link">
-        Obstacle Segmentation Evaluation
+        Obstacle Segmentation の評価
       </a>
     </li>
   
@@ -456,7 +456,7 @@
   
     <li class="md-nav__item">
       <a href="../../quick_start/perception/" class="md-nav__link">
-        Perception Evaluation
+        認識機能の評価
       </a>
     </li>
   
@@ -470,7 +470,7 @@
   
     <li class="md-nav__item">
       <a href="../../quick_start/performance_diag/" class="md-nav__link">
-        Performance Diag Evaluation
+        診断機能の評価
       </a>
     </li>
   
@@ -1121,10 +1121,10 @@
 <p>Autoware の自己位置推定(localization)が安定して動作しているかを評価する。</p>
 <p>自己位置推定の評価では NDT の信頼度と収束性を評価する。</p>
 <h2 id="_2">評価方法<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
-<p>localization.launch.py を使用して評価する。
+<p><code>localization.launch.py</code> を使用して評価する。
 launch を立ち上げると以下のことが実行され、評価される。</p>
 <ol>
-<li>launch で評価ノード(localization_evaluator_node)と logging_simulator.launch、ros2 bag play を立ち上げる</li>
+<li>launch で評価ノード(<code>localization_evaluator_node</code>)と <code>logging_simulator.launch</code>、<code>ros2 bag play</code>コマンドを立ち上げる</li>
 <li>bag から出力されたセンサーデータを autoware が受け取って、自己位置推定を行う</li>
 <li>評価ノードが topic を subscribe して、NDT の信頼度、収束性が基準を満たしているかを判定して結果をファイルに記録する</li>
 <li>bag の再生が終了すると自動で launch が終了して評価が終了する</li>
@@ -1159,9 +1159,7 @@ launch を立ち上げると以下のことが実行され、評価される。<
 <h3 id="_7">収束異常<a class="headerlink" href="#_7" title="Permanent link">#</a></h3>
 <p>収束正常の条件を満たさない場合</p>
 <h2 id="topic">評価ノードが使用する Topic 名とデータ型<a class="headerlink" href="#topic" title="Permanent link">#</a></h2>
-<ul>
-<li>subscribe</li>
-</ul>
+<p>Subscribed topics:</p>
 <table>
 <thead>
 <tr>
@@ -1208,9 +1206,7 @@ launch を立ち上げると以下のことが実行され、評価される。<
 </tr>
 </tbody>
 </table>
-<ul>
-<li>publish</li>
-</ul>
+<p>Published topics:</p>
 <table>
 <thead>
 <tr>
@@ -1284,7 +1280,7 @@ launch を立ち上げると以下のことが実行され、評価される。<
 <p>localization では、収束性と信頼度の 2 つを評価しているので、行毎に収束性または信頼度のどちらかの結果が入っている。
 Result は収束性と信頼度両方のパスしていれば true でそれ以外は false 失敗となる。</p>
 <p>以下に、それぞれの評価の例を記述する。
-ただし、結果ファイルフォーマットで解説済みの共通部分については省略する。</p>
+<strong>注:結果ファイルフォーマットで解説済みの共通部分については省略する。</strong></p>
 <p>収束性の結果(Frame の中に Convergence 項目がある場合)</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="nt">&quot;Frame&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>

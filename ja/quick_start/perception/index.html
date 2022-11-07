@@ -15,7 +15,7 @@
     
     
       
-        <title>Perception Evaluation - Driving Log Replayer Documentation</title>
+        <title>認識機能の評価 - Driving Log Replayer Documentation</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#perception-evaluation" class="md-skip">
+        <a href="#_1" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Perception Evaluation
+              認識機能の評価
             
           </span>
         </div>
@@ -402,7 +402,7 @@
   
     <li class="md-nav__item">
       <a href="../installation/" class="md-nav__link">
-        Installation
+        インストール
       </a>
     </li>
   
@@ -416,7 +416,7 @@
   
     <li class="md-nav__item">
       <a href="../setup/" class="md-nav__link">
-        Setup
+        設定
       </a>
     </li>
   
@@ -430,7 +430,7 @@
   
     <li class="md-nav__item">
       <a href="../localization/" class="md-nav__link">
-        Localization Evaluation
+        自己位置推定機能の評価
       </a>
     </li>
   
@@ -444,7 +444,7 @@
   
     <li class="md-nav__item">
       <a href="../obstacle_segmentation/" class="md-nav__link">
-        Obstacle Segmentation Evaluation
+        Obstacle Segmentation の評価
       </a>
     </li>
   
@@ -467,12 +467,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Perception Evaluation
+          認識機能の評価
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Perception Evaluation
+        認識機能の評価
       </a>
       
         
@@ -491,15 +491,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#preparation" class="md-nav__link">
-    Preparation
+  <a href="#_2" class="md-nav__link">
+    準備
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-run" class="md-nav__link">
-    How to run
+  <a href="#_3" class="md-nav__link">
+    実行方法
   </a>
   
 </li>
@@ -520,7 +520,7 @@
   
     <li class="md-nav__item">
       <a href="../performance_diag/" class="md-nav__link">
-        Performance Diag Evaluation
+        診断機能の評価
       </a>
     </li>
   
@@ -840,15 +840,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#preparation" class="md-nav__link">
-    Preparation
+  <a href="#_2" class="md-nav__link">
+    準備
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-run" class="md-nav__link">
-    How to run
+  <a href="#_3" class="md-nav__link">
+    実行方法
   </a>
   
 </li>
@@ -867,40 +867,40 @@
                 
                   
 
-  <a href="https://github.com/tier4/driving_log_replayer/edit/main/docs/quick_start/perception.en.md" title="編集" class="md-content__button md-icon">
+  <a href="https://github.com/tier4/driving_log_replayer/edit/main/docs/quick_start/perception.ja.md" title="編集" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="perception-evaluation">Perception Evaluation<a class="headerlink" href="#perception-evaluation" title="Permanent link">#</a></h1>
-<h2 id="preparation">Preparation<a class="headerlink" href="#preparation" title="Permanent link">#</a></h2>
+<h1 id="_1">認識機能の評価<a class="headerlink" href="#_1" title="Permanent link">#</a></h1>
+<h2 id="_2">準備<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
 <ol>
 <li>
-<p>Copy sample scenario</p>
+<p>サンプルのシナリオのコピー</p>
 <div class="highlight"><pre><span></span><code>mkdir -p ~/driving_log_replayer_data/perception/sample
 cp -r ~/autoware/src/simulator/driving_log_replayer/sample/perception/scenario.yaml ~/driving_log_replayer_data/perception/sample
 </code></pre></div>
 </li>
 <li>
-<p>Copy bag file from dataset</p>
+<p>サンプルのデータセットをコピー</p>
 <div class="highlight"><pre><span></span><code>mkdir -p ~/driving_log_replayer_data/perception/sample/t4_dataset
 cp -r ~/driving_log_replayer_data/sample_dataset ~/driving_log_replayer_data/perception/sample/t4_dataset
 </code></pre></div>
 </li>
 </ol>
-<h2 id="how-to-run">How to run<a class="headerlink" href="#how-to-run" title="Permanent link">#</a></h2>
+<h2 id="_3">実行方法<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
 <ol>
 <li>
-<p>Run the simulation</p>
+<p>シミュレーションの実行</p>
 <div class="highlight"><pre><span></span><code>driving_log_replayer simulation run -p perception --rate <span class="m">0</span>.5
 </code></pre></div>
 <p><img alt="perception" src="../images/perception.png" /></p>
 </li>
 <li>
-<p>Check the results</p>
-<p>Results are displayed in the terminal like below.
- The number of tests will vary slightly depending on PC performance and CPU load conditions, so slight differences are not a problem.</p>
+<p>結果の確認</p>
+<p>以下のような結果がターミナルに表示されます。
+ PC の性能や CPU の負荷状況によってテスト回数が若干異なることがありますが、多少の差は問題ありません。</p>
 <div class="highlight"><pre><span></span><code> <span class="nb">test</span> <span class="k">case</span> <span class="m">1</span> / <span class="m">1</span> : use <span class="k">case</span>: sample
  --------------------------------------------------
  TestResult: Passed
@@ -933,7 +933,7 @@ cp -r ~/driving_log_replayer_data/sample_dataset ~/driving_log_replayer_data/per
     <nav class="md-footer__inner md-grid" aria-label="フッター" >
       
         
-        <a href="../obstacle_segmentation/" class="md-footer__link md-footer__link--prev" aria-label="前: Obstacle Segmentation Evaluation" rel="prev">
+        <a href="../obstacle_segmentation/" class="md-footer__link md-footer__link--prev" aria-label="前: Obstacle Segmentation の評価" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -942,20 +942,20 @@ cp -r ~/driving_log_replayer_data/sample_dataset ~/driving_log_replayer_data/per
               <span class="md-footer__direction">
                 前
               </span>
-              Obstacle Segmentation Evaluation
+              Obstacle Segmentation の評価
             </div>
           </div>
         </a>
       
       
         
-        <a href="../performance_diag/" class="md-footer__link md-footer__link--next" aria-label="次: Performance Diag Evaluation" rel="next">
+        <a href="../performance_diag/" class="md-footer__link md-footer__link--next" aria-label="次: 診断機能の評価" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 次
               </span>
-              Performance Diag Evaluation
+              診断機能の評価
             </div>
           </div>
           <div class="md-footer__button md-icon">

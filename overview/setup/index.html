@@ -979,7 +979,7 @@ nano <span class="nv">$HOME</span>/.driving_log_replayer.config.toml
 <span class="c1"># cli creation</span>
 driving_log_replayer configure register -d <span class="si">${</span><span class="nv">data_directory</span><span class="si">}</span> -o <span class="si">${</span><span class="nv">output_directory</span><span class="si">}</span> -a <span class="si">${</span><span class="nv">autoware_path</span><span class="si">}</span> <span class="o">[</span>-p <span class="si">${</span><span class="nv">profile</span><span class="si">}</span><span class="o">]</span>
 </code></pre></div>
-<p>At least one profile is required, and one must be named default.</p>
+<p>At least one profile is required, and one must be named <code>default</code>.</p>
 <p>Specifying the profile name with <code>-p ${profile_name}</code> in the commands described below will load the settings specified in the profile.
 You can switch between multiple autoware profiles, and if no profile is specified, default is used.</p>
 <div class="highlight"><pre><span></span><code><span class="k">[profile_name]</span><span class="w"></span>

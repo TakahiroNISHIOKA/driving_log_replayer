@@ -1154,37 +1154,35 @@
 <p>The diagnostics evaluation is executed by launching the <code>performance_diag.launch.py</code> file.
 Launching the file executes the following steps:</p>
 <ol>
-<li>Execute launch of evaluation node (<code>performance_diag_evaluator_node</code>), <code>logging_simulator.launch</code> file and <code>ros2 bag play</code> command.
-   2.Autoware receives sensor data output from the input rosbag and outputs the<code>/diagnostics_agg</code> topic.</li>
+<li>Execute launch of evaluation node (<code>performance_diag_evaluator_node</code>), <code>logging_simulator.launch</code> file and <code>ros2 bag play</code> command.</li>
+<li>Autoware receives sensor data output from the input rosbag and outputs the<code>/diagnostics_agg</code> topic.</li>
 <li>The evaluation node subscribes to <code>/diagnostics_agg</code> topic, and evaluates data. The result is dumped into a file.</li>
 <li>When the playback of the rosbag is finished, Autoware's launch is automatically terminated, and the evaluation is completed.</li>
 </ol>
 <h3 id="visibility-evaluation">visibility evaluation<a class="headerlink" href="#visibility-evaluation" title="Permanent link">#</a></h3>
 <p>The evaluation process confirms that more than a specified number of ERRORs for limited visibility are generated for rosbag input data obtained under rainy conditions (naturally or artificially generated).
 Also, using data obtained during sunny weather, it is confirmed that ERRORs are never generated.</p>
+<p>The <code>status.name</code> in <code>/diagnostics_agg</code> corresponding to <code>/autoware/sensing/lidar/performance_monitoring/visibility/\*</code> is used for judgment.</p>
 <h3 id="blockage-evaluation">blockage evaluation<a class="headerlink" href="#blockage-evaluation" title="Permanent link">#</a></h3>
 <p>For blockage evaluation, acquire data with LiDAR intentionally covered with a material that will not pass the laser beam (for example box). The evaluation confirms that ERROR for blockage is output more than a certain number of times for the considered situation.
 The node will also confirm that no ERROR is generated for not covered LiDAR.</p>
+<p>The <code>status.name</code> in <code>/diagnostics_agg</code> corresponding to <code>/autoware/sensing/lidar/performance_monitoring/blockage/*</code> is used for judgment.</p>
 <h2 id="evaluation-result">Evaluation Result<a class="headerlink" href="#evaluation-result" title="Permanent link">#</a></h2>
 <p>For each LiDAR diagnostic subscription, the evaluation judgment will be published on the topics described below:</p>
-<ul>
-<li>visibility: `/autoware/sensing/lidar/performance_monitoring/visibility/*</li>
-<li>blockage: <code>/autoware/sensing/lidar/performance_monitoring/blockage/*</code></li>
-</ul>
 <p>Each output of the evaluation can be considered a success or a failure depending on what you want to evaluate. You can change this by describing the type in the scenario.</p>
 <ul>
-<li>If the scenario type is TP (true positive), success will be achieved if a certain number of <code>Diag</code> ERRORs is generated.</li>
-<li>If the scenario type is FP (false positive), it succeeds if the <code>Diag</code> state never becomes ERROR.</li>
+<li>If the scenario type is TP (true positive), it succeeds if the <code>Diag</code> state is ERROR.</li>
+<li>If the scenario type is FP (false positive), it succeeds if the <code>Diag</code> state is not ERROR.</li>
 <li>If the scenario type is null, the test is omitted.</li>
 </ul>
 <h3 id="tp-normal">TP Normal<a class="headerlink" href="#tp-normal" title="Permanent link">#</a></h3>
-<p>If the scenario type is TP and the level of visibility or blockage in the diagnostic information (<code>/diagnostics_agg</code>) is ERROR</p>
+<p>If the scenario type is TP and the level in the diagnostic information is ERROR</p>
 <h3 id="tp-error">TP Error<a class="headerlink" href="#tp-error" title="Permanent link">#</a></h3>
-<p>If the scenario type is TP and the level of visibility or blockage in the diagnostic information (<code>/diagnostics_agg</code>) is not ERROR.</p>
+<p>If the scenario type is TP and the level in the diagnostic information is not ERROR.</p>
 <h3 id="fp-normal">FP Normal<a class="headerlink" href="#fp-normal" title="Permanent link">#</a></h3>
-<p>If the scenario type is FP and the level of visibility or blockage in the diagnostic information (<code>/diagnostics_agg</code>) is not ERROR.</p>
+<p>If the scenario type is FP and the level in the diagnostic information is not ERROR.</p>
 <h3 id="fp-error">FP Error<a class="headerlink" href="#fp-error" title="Permanent link">#</a></h3>
-<p>If the scenario type is FP and the level of visibility or blockage in the diagnostic information (<code>/diagnostics_agg</code>) is ERROR.</p>
+<p>If the scenario type is FP and the level in the diagnostic information is ERROR.</p>
 <h2 id="topic-name-and-data-type-used-by-evaluation-node">Topic name and data type used by evaluation node<a class="headerlink" href="#topic-name-and-data-type-used-by-evaluation-node" title="Permanent link">#</a></h2>
 <p>Subscribed topics:</p>
 <table>
@@ -1265,7 +1263,9 @@ The following example shows the topic list available in evaluation input rosbag 
 <li>/sensing/imu/tamagawa/imu_raw</li>
 <li>/sensing/lidar/*/velodyne_packets</li>
 <li>/gsm8/from_can_bus</li>
+<li>/tf</li>
 </ul>
+<p><strong>NOTE: If localization is false (false by default), /tf is required.</strong></p>
 <h3 id="topics-that-must-not-be-included-in-the-input-rosbag">Topics that must not be included in the input rosbag<a class="headerlink" href="#topics-that-must-not-be-included-in-the-input-rosbag" title="Permanent link">#</a></h3>
 <ul>
 <li>/clock</li>
@@ -1321,7 +1321,7 @@ The following example shows the topic list available in evaluation input rosbag 
 <p>In <code>performance_diag</code> evaluation scenario visibility and blockage are evaluated.
 The <code>Result</code> is <code>true</code> if both visibility and blockage evaluation steps have passed. Otherwise, the <code>Result</code> is <code>false</code>.</p>
 <p>The result format is shown below.
-<em>NOTE: common part of the result file format, which has already been explained, is omitted.</em></p>
+<strong>NOTE: common part of the result file format, which has already been explained, is omitted.</strong></p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="nt">&quot;Frame&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;Visibility&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>

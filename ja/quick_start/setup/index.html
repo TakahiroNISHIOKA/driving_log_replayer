@@ -15,7 +15,7 @@
     
     
       
-        <title>Setup - Driving Log Replayer Documentation</title>
+        <title>設定 - Driving Log Replayer Documentation</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#setup" class="md-skip">
+        <a href="#_1" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Setup
+              設定
             
           </span>
         </div>
@@ -402,7 +402,7 @@
   
     <li class="md-nav__item">
       <a href="../installation/" class="md-nav__link">
-        Installation
+        インストール
       </a>
     </li>
   
@@ -425,12 +425,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Setup
+          設定
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Setup
+        設定
       </a>
       
         
@@ -449,8 +449,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#set-up-resources" class="md-nav__link">
-    Set up resources
+  <a href="#_2" class="md-nav__link">
+    リソースのセットアップ
   </a>
   
 </li>
@@ -471,7 +471,7 @@
   
     <li class="md-nav__item">
       <a href="../localization/" class="md-nav__link">
-        Localization Evaluation
+        自己位置推定機能の評価
       </a>
     </li>
   
@@ -485,7 +485,7 @@
   
     <li class="md-nav__item">
       <a href="../obstacle_segmentation/" class="md-nav__link">
-        Obstacle Segmentation Evaluation
+        Obstacle Segmentation の評価
       </a>
     </li>
   
@@ -499,7 +499,7 @@
   
     <li class="md-nav__item">
       <a href="../perception/" class="md-nav__link">
-        Perception Evaluation
+        認識機能の評価
       </a>
     </li>
   
@@ -513,7 +513,7 @@
   
     <li class="md-nav__item">
       <a href="../performance_diag/" class="md-nav__link">
-        Performance Diag Evaluation
+        診断機能の評価
       </a>
     </li>
   
@@ -833,8 +833,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#set-up-resources" class="md-nav__link">
-    Set up resources
+  <a href="#_2" class="md-nav__link">
+    リソースのセットアップ
   </a>
   
 </li>
@@ -853,39 +853,39 @@
                 
                   
 
-  <a href="https://github.com/tier4/driving_log_replayer/edit/main/docs/quick_start/setup.en.md" title="編集" class="md-content__button md-icon">
+  <a href="https://github.com/tier4/driving_log_replayer/edit/main/docs/quick_start/setup.ja.md" title="編集" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">#</a></h1>
+<h1 id="_1">設定<a class="headerlink" href="#_1" title="Permanent link">#</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Running the Driving Log Replayer requires some additional steps on top of building and installing Autoware, so make sure that <a href="../installation/">Driving Log Replayer installation</a> has been completed first before proceeding.</p>
+<p>Driving Log Replayerを実行するには、Autowareのビルドとインストールに加えて、<a href="../installation/">Driving Log Replayerのインストール</a> が完了している必要があります。</p>
 <p>Sample map: Copyright 2020 TIER IV, Inc.</p>
 <p>Sample Dataset: Copyright 2022 TIER IV, Inc.</p>
 </div>
-<h2 id="set-up-resources">Set up resources<a class="headerlink" href="#set-up-resources" title="Permanent link">#</a></h2>
+<h2 id="_2">リソースのセットアップ<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
 <ol>
 <li>
-<p>Download and unpack a sample map.</p>
+<p>地図のダウンロードと解凍</p>
 <div class="highlight"><pre><span></span><code>mkdir -p ~/autoware_map
 gdown -O ~/autoware_map/sample-map-planning.zip <span class="s1">&#39;https://docs.google.com/uc?export=download&amp;id=1499_nsbUbIeturZaDj7jhUownh5fvXHd&#39;</span>
 unzip -d ~/autoware_map ~/autoware_map/sample-map-planning.zip
 </code></pre></div>
-<p>You can also download <a href="https://drive.google.com/file/d/1499_nsbUbIeturZaDj7jhUownh5fvXHd/view">the map</a> manually.</p>
+<p>ブラウザから手動で<a href="https://drive.google.com/file/d/1499_nsbUbIeturZaDj7jhUownh5fvXHd/view">地図</a>をダウンロードすることも可能です。</p>
 </li>
 <li>
-<p>Download and unpack a dataset.</p>
+<p>データセットのダウロードと解凍</p>
 <div class="highlight"><pre><span></span><code>mkdir -p ~/driving_log_replayer_data
 gdown -O ~/driving_log_replayer_data/sample_dataset.tar.zst <span class="s1">&#39;https://docs.google.com/uc?export=download&amp;id=1UjMWZj5Yc55O7BZiGHa0ikZGhwmcfPiS&#39;</span>
 tar -I zstd -xvf ~/driving_log_replayer_data/sample_dataset.tar.zst -C ~/driving_log_replayer_data/
 </code></pre></div>
-<p>You can also download <a href="https://drive.google.com/file/d/1UjMWZj5Yc55O7BZiGHa0ikZGhwmcfPiS/view">the dataset</a> manually.</p>
+<p>ブラウザから手動で<a href="https://drive.google.com/file/d/1UjMWZj5Yc55O7BZiGHa0ikZGhwmcfPiS/view">データセット</a>をダウンロードすることも可能です。</p>
 </li>
 <li>
-<p>Copy sample setting</p>
+<p>サンプル設定をコピーする</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># assuming that autoware is placed under ~/autoware directory</span>
 cp ~/autoware/src/simulator/driving_log_replayer/sample/.driving_log_replayer.config.toml ~/
 </code></pre></div>
@@ -916,7 +916,7 @@ cp ~/autoware/src/simulator/driving_log_replayer/sample/.driving_log_replayer.co
     <nav class="md-footer__inner md-grid" aria-label="フッター" >
       
         
-        <a href="../installation/" class="md-footer__link md-footer__link--prev" aria-label="前: Installation" rel="prev">
+        <a href="../installation/" class="md-footer__link md-footer__link--prev" aria-label="前: インストール" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -925,20 +925,20 @@ cp ~/autoware/src/simulator/driving_log_replayer/sample/.driving_log_replayer.co
               <span class="md-footer__direction">
                 前
               </span>
-              Installation
+              インストール
             </div>
           </div>
         </a>
       
       
         
-        <a href="../localization/" class="md-footer__link md-footer__link--next" aria-label="次: Localization Evaluation" rel="next">
+        <a href="../localization/" class="md-footer__link md-footer__link--next" aria-label="次: 自己位置推定機能の評価" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 次
               </span>
-              Localization Evaluation
+              自己位置推定機能の評価
             </div>
           </div>
           <div class="md-footer__button md-icon">

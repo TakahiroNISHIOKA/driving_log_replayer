@@ -747,14 +747,7 @@
     Evaluation method
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#evaluation-result" class="md-nav__link">
-    Evaluation Result
-  </a>
-  
-    <nav class="md-nav" aria-label="Evaluation Result">
+    <nav class="md-nav" aria-label="Evaluation method">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -770,6 +763,19 @@
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluation-result" class="md-nav__link">
+    Evaluation Result
+  </a>
+  
+    <nav class="md-nav" aria-label="Evaluation Result">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#reliability-normal" class="md-nav__link">
@@ -960,14 +966,7 @@
     Evaluation method
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#evaluation-result" class="md-nav__link">
-    Evaluation Result
-  </a>
-  
-    <nav class="md-nav" aria-label="Evaluation Result">
+    <nav class="md-nav" aria-label="Evaluation method">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -983,6 +982,19 @@
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluation-result" class="md-nav__link">
+    Evaluation Result
+  </a>
+  
+    <nav class="md-nav" aria-label="Evaluation Result">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#reliability-normal" class="md-nav__link">
@@ -1117,8 +1129,6 @@ Launching the file executes the following steps:</p>
 <li>Evaluation node subscribes to Autoware's output topics, determines whether NDT reliability and convergence meet the criteria, and dumps the results to a file</li>
 <li>When the playback of the rosbag is finished, Autoware's launch is automatically terminated, and the evaluation is completed.</li>
 </ol>
-<h2 id="evaluation-result">Evaluation Result<a class="headerlink" href="#evaluation-result" title="Permanent link">#</a></h2>
-<p>The results are calculated for each subscription. The format and available states are described below.</p>
 <h3 id="reliability-of-ndt">Reliability of NDT<a class="headerlink" href="#reliability-of-ndt" title="Permanent link">#</a></h3>
 <p>Of the following two topics, the one specified in the scenario will be used for evaluation.</p>
 <ul>
@@ -1132,6 +1142,8 @@ Launching the file executes the following steps:</p>
 <li><code>/localization/pose_twist_fusion_filter/pose</code></li>
 </ul>
 <p>However, evaluation of convergence will be started after NDT convergence, and convergence is determined by /localization/pose_estimator/transform_probability &gt; 0 or /localization/pose_estimator/nearest_voxel_transformation_likelihood &gt; 0.</p>
+<h2 id="evaluation-result">Evaluation Result<a class="headerlink" href="#evaluation-result" title="Permanent link">#</a></h2>
+<p>The results are calculated for each subscription. The format and available states are described below.</p>
 <h3 id="reliability-normal">Reliability Normal<a class="headerlink" href="#reliability-normal" title="Permanent link">#</a></h3>
 <p>If the data in <code>/localization/pose_estimator/transform_probability</code> or <code>/localization/pose_estimator/nearest_voxel_transformation_likelihood</code> is greater than or equal the <code>AllowableLikelihood</code> described in the scenario.</p>
 <h3 id="reliability-error">Reliability Error<a class="headerlink" href="#reliability-error" title="Permanent link">#</a></h3>
