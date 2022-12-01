@@ -875,7 +875,7 @@
         
           <li class="md-nav__item">
   <a href="#ros" class="md-nav__link">
-    ROSパッケージにする理由
+    ROS パッケージにする理由
   </a>
   
 </li>
@@ -909,7 +909,7 @@
         
           <li class="md-nav__item">
   <a href="#ros_1" class="md-nav__link">
-    ROS側
+    ROS 側
   </a>
   
 </li>
@@ -938,20 +938,20 @@
 
 
 <h1 id="driving-log-replayer-analyzer">Driving Log Replayer Analyzer<a class="headerlink" href="#driving-log-replayer-analyzer" title="Permanent link">#</a></h1>
-<p>Driving Log Replayerで行ったテストの結果ファイルを分析するパッケージ。</p>
+<p>Driving Log Replayer で行ったテストの結果ファイルを分析するパッケージ。</p>
 <h2 id="_1">注意<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
-<p>開発中であり、現状ではobstacle_segmentationのresult.jsonlの分析のみ可能</p>
+<p>開発中であり、現状では obstacle_segmentation の result.jsonl の分析のみ可能</p>
 <h2 id="_2">インストール方法<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
 <ul>
-<li>driving_log_replayer_cliと一緒にインストールされる</li>
-<li>driving_log_replayerと一緒にrosのパッケージとしてインストールされる</li>
+<li>driving_log_replayer_cli と一緒にインストールされる</li>
+<li>driving_log_replayer と一緒に ros のパッケージとしてインストールされる</li>
 </ul>
 <h2 id="_3">構成<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
-<p>現状、ROSの機能を使用しないpythonパッケージとなっているが、ROSのパッケージとしてもインストールされる。
-<a href="https://github.com/tier4/autoware_perception_evaluation">perception評価用の依存ライブラリ</a>と同じように構成している。</p>
-<h3 id="ros">ROSパッケージにする理由<a class="headerlink" href="#ros" title="Permanent link">#</a></h3>
-<p><a href="https://docs.web.auto/user-manuals/evaluator/introduction">Autoware Evaluator</a>でビルドして実行されることを考えると、pipなどで別途インストールする構成にしてしまうとクラウド基盤側にライブラリを導入するための特別な処理が必要になる。
-ROSのパッケージになっていれば、他のパッケージと自動でインストールされる。</p>
+<p>現状、ROS の機能を使用しない python パッケージとなっているが、ROS のパッケージとしてもインストールされる。
+<a href="https://github.com/tier4/autoware_perception_evaluation">perception 評価用の依存ライブラリ</a>と同じように構成している。</p>
+<h3 id="ros">ROS パッケージにする理由<a class="headerlink" href="#ros" title="Permanent link">#</a></h3>
+<p><a href="https://docs.web.auto/user-manuals/evaluator/introduction">Autoware Evaluator</a>でビルドして実行されることを考えると、pip などで別途インストールする構成にしてしまうとクラウド基盤側にライブラリを導入するための特別な処理が必要になる。
+ROS のパッケージになっていれば、他のパッケージと自動でインストールされる。</p>
 <h2 id="_4">使い方<a class="headerlink" href="#_4" title="Permanent link">#</a></h2>
 <div class="highlight"><pre><span></span><code><span class="c1"># pythonのcliコマンドで使う場合</span>
 driving_log_replayer_analyzer <span class="si">${</span><span class="nv">jsonl_path</span><span class="si">}</span> -c <span class="si">${</span><span class="nv">config_path</span><span class="si">}</span>
@@ -960,14 +960,14 @@ driving_log_replayer_analyzer <span class="si">${</span><span class="nv">jsonl_p
 ros2 launch driving_log_replayer obstacle_segmentation_analyze.launch.py <span class="nv">result_json_path</span><span class="o">=</span><span class="si">${</span><span class="nv">jsonl_path</span><span class="si">}</span>
 </code></pre></div>
 <h2 id="_5">これからやる<a class="headerlink" href="#_5" title="Permanent link">#</a></h2>
-<p>現状では、cliと、ros2のlaunchで同じことをやっているだけに過ぎないが、今後用途を以下のように分けていく。</p>
+<p>現状では、cli と、ros2 の launch で同じことをやっているだけに過ぎないが、今後用途を以下のように分けていく。</p>
 <p><img alt="usage" src="images/future_work.drawio.svg" /></p>
 <h3 id="cli">cli<a class="headerlink" href="#cli" title="Permanent link">#</a></h3>
 <p>ユーザーがローカルで分析するために利用する
-jsonlから分析結果のhtmlや画像ファイルを出力するために利用する</p>
-<h3 id="ros_1">ROS側<a class="headerlink" href="#ros_1" title="Permanent link">#</a></h3>
-<p>driving_log_replayer_analyzerをjsonl分析のライブラリとしてのみ使用する。
-pandasのdata frameをjsonlまたはrosbagで保存しておくことで、Autoware Evaluatorのフロントで可視化するための元データにする。</p>
+jsonl から分析結果の html や画像ファイルを出力するために利用する</p>
+<h3 id="ros_1">ROS 側<a class="headerlink" href="#ros_1" title="Permanent link">#</a></h3>
+<p>driving_log_replayer_analyzer を jsonl 分析のライブラリとしてのみ使用する。
+pandas の data frame を jsonl または rosbag で保存しておくことで、Autoware Evaluator のフロントで可視化するための元データにする。</p>
 
               
             </article>
