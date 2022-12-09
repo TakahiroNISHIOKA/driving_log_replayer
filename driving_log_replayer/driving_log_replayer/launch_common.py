@@ -216,7 +216,8 @@ def get_player(additional_argument=None):
         "play",
         LaunchConfiguration("input_bag"),
         "--rate",
-        LaunchConfiguration("play_rate"),
+        # LaunchConfiguration("play_rate"),
+        "0.1",  # 暫定対応、topic rateが落ちる件
         "--clock",
         "200",
     ]
